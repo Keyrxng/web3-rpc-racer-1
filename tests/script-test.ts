@@ -1,23 +1,23 @@
-import { HandlerConstructorConfig } from "../dist/cjs/src/handler";
-import { RPCHandler } from "../dist/cjs/src/rpc-handler";
+import { HandlerConstructorConfig, RPCHandler } from "../dist/";
+import getRPCHandler from "../dist/index";
 
-const config: HandlerConstructorConfig = {
-  networkId: 100,
-  autoStorage: false,
-};
+(async () => {
+  const RPCHandler = await getRPCHandler();
 
-async function main() {
-  const handler = new RPCHandler(config);
-  const provider = await handler.getFastestRpcProvider();
-  console.trace(provider);
+  const config: HandlerConstructorConfig = {
+    networkId: 1,
+  };
 
-  if (!provider) {
-    console.error("Provider not available");
-    return;
-  } else {
-    console.log("Provider available");
-    console.log("Block number:", (await provider.getBlockNumber()).toString());
-  }
-}
+  const handler: RPCHandler = new RPCHandler(config);
 
-main();
+  await handler.getFastestRpcProvider();
+
+  const latencies = handler.getLatencies();
+
+  const provider = handler.getFastestRpcProvider();
+
+  console.log(provider);
+  console.log("=====================================");
+  console.log(latencies);
+  process.exit(0);
+})().catch(console.error);

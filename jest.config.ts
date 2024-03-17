@@ -9,4 +9,9 @@ module.exports = {
   coverageReporters: ["json", "lcov", "text", "clover", "json-summary"],
   reporters: ["default", "jest-junit"],
   coverageDirectory: "coverage",
+  moduleNameMapper: {
+    "^./esm/index.js$": "dist/esm/index.js",
+    "^./cjs/index.js$": "dist/cjs/index.js",
+  },
+  modulePaths: ["dist"],
 } as JestConfigWithTsJest;

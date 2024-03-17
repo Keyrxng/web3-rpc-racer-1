@@ -4,7 +4,7 @@ import chainIDList from "../lib/chainlist/constants/chainIds.json";
 import path from "path";
 import * as fs from "fs";
 
-const typescriptEntries = ["src/handler/rpc-handler.ts", "src/types/constants.ts", "src/types/handler.ts"];
+const typescriptEntries = ["index.ts"];
 export const entries = [...typescriptEntries];
 const extraRpcs: Record<string, string[]> = {};
 // this flattens all the rpcs into a single object, with key names that match the networkIds. The arrays are just of URLs per network ID.
@@ -19,7 +19,6 @@ Object.keys(chainlist).forEach((networkId) => {
 export const esBuildContext: esbuild.BuildOptions = {
   entryPoints: entries,
   bundle: true,
-  minify: true,
 
   outdir: "dist",
   define: createEnvDefines({ extraRpcs, chainIDList }),
@@ -45,7 +44,7 @@ async function buildForEnvironments() {
       ...esBuildContext,
       tsconfig: "tsconfig.node.json",
       platform: "node",
-      outdir: "dist/cjs/src",
+      outdir: "dist/cjs",
       format: "cjs",
     })
     .then(() => {
@@ -61,7 +60,7 @@ async function buildForEnvironments() {
       ...esBuildContext,
       tsconfig: "tsconfig.web.json",
       platform: "browser",
-      outdir: "dist/esm/src",
+      outdir: "dist/esm",
       format: "esm",
     })
     .then(() => {
@@ -77,7 +76,6 @@ async function buildIndex() {
   await esbuild.build({
     entryPoints: ["index.ts"],
     bundle: true,
-    platform: "neutral",
     format: "cjs",
     outfile: "dist/index.js",
     define: createEnvDefines({ extraRpcs, chainIDList }),

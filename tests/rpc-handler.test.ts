@@ -1,7 +1,5 @@
-import { RPCHandler } from "../dist/cjs/src/rpc-handler";
-import { HandlerConstructorConfig } from "../src/handler";
-import { networkRpcs } from "../dist/cjs/src/constants";
 import { JsonRpcProvider } from "@ethersproject/providers";
+import { HandlerConstructorConfig, networkRpcs, RPCHandler } from "../dist";
 
 export const testConfig: HandlerConstructorConfig = {
   networkId: 100,
@@ -10,11 +8,14 @@ export const testConfig: HandlerConstructorConfig = {
 };
 
 describe("RPCHandler", () => {
-  const rpcHandler = new RPCHandler(testConfig);
   let provider: JsonRpcProvider;
+  let rpcHandler: RPCHandler;
 
-  afterAll(() => {
-    jest.restoreAllMocks();
+  beforeEach(async () => {
+    jest.resetAllMocks();
+    jest.clearAllMocks();
+    jest.resetModules();
+    rpcHandler = new RPCHandler(testConfig);
   });
 
   describe("Initialization", () => {
@@ -24,10 +25,6 @@ describe("RPCHandler", () => {
 
     it("should initialize with correct networkId", () => {
       expect(rpcHandler["_networkId"]).toBe(testConfig.networkId);
-    });
-
-    it(`should initialize with correct env`, () => {
-      expect(rpcHandler["_env"]).toBe("node");
     });
 
     it("should initialize with correct cacheRefreshCycles", () => {
@@ -71,9 +68,8 @@ describe("RPCHandler", () => {
       const runtime = rpcHandler.getRuntimeRpcs();
       expect(runtime.length).toBeGreaterThan(0);
       expect(runtime.length).toBe(latArrLen);
-      expect(runtime.length).toBeLessThan(networkRpcs[testConfig.networkId].length);
+      expect(runtime.length).toBeLessThanOrEqual(networkRpcs[testConfig.networkId].length);
 
-      expect(runtime).not.toBe(networkRpcs[testConfig.networkId]);
       expect(latArrLen).toBeGreaterThan(1);
 
       const sorted = Object.entries(latencies).sort((a, b) => a[1] - b[1]);

@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - development # change this to main
+      - polymorph
 
 jobs:
   release-please:

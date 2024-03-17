@@ -1,4 +1,4 @@
-import { ValidBlockData } from "../types/handler";
+import { ValidBlockData } from "../../types/handler";
 import { StorageService } from "./storage-service";
 type PromiseResult = { success: boolean; rpcUrl: string; duration: number };
 
