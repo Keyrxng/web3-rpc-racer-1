@@ -51,15 +51,15 @@ export class RPCHandler implements HandlerInterface {
 
   public async testRpcPerformance(): Promise<JsonRpcProvider> {
     const shouldRefreshRpcs =
-      Object.keys(this._latencies).filter((rpc) => rpc.endsWith(`_${this._networkId}`)).length <= 1 || this._refreshLatencies >= this._cacheRefreshCycles;
+      Object.keys(this._latencies).filter((rpc) => rpc.endsWith(`_${this._networkId}_`)).length <= 1 || this._refreshLatencies >= this._cacheRefreshCycles;
 
     if (shouldRefreshRpcs) {
       this._runtimeRpcs = networkRpcs[this._networkId];
       this._refreshLatencies = 0;
     } else {
       this._runtimeRpcs = Object.keys(this._latencies).map((rpc) => {
-        if (rpc.includes("api_key") && rpc.endsWith(`_${this._networkId}`)) {
-          return rpc.replace(`_${this._networkId}`, "");
+        if (rpc.includes("api_key") && rpc.endsWith(`_${this._networkId}_`)) {
+          return rpc.replace(`_${this._networkId}_`, "");
         }
 
         if ((this._networkId !== 31337 && rpc.includes("localhost")) || rpc.includes("127.0.0.1:8545")) {
@@ -148,13 +148,15 @@ export class RPCHandler implements HandlerInterface {
         method: "eth_getBlockByNumber",
         params: ["latest", false],
         id: 1,
-      }),
-      this._env
+      })
     );
 
     this._runtimeRpcs = runtimeRpcs;
     this._latencies = latencies;
     this._refreshLatencies++;
+
+    StorageService.setLatencies(this._env, this._latencies);
+    StorageService.setRefreshLatencies(this._env, this._refreshLatencies);
   }
   private _updateConfig(config: HandlerConstructorConfig): void {
     if (config.networkName) {
@@ -175,7 +177,7 @@ export class RPCHandler implements HandlerInterface {
 
     if (config.autoStorage) {
       this._autoStorage = true;
-      this._latencies = StorageService.getLatencies(this._env);
+      this._latencies = StorageService.getLatencies(this._env, this._networkId);
       this._refreshLatencies = StorageService.getRefreshLatencies(this._env);
     }
   }
