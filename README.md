@@ -11,7 +11,7 @@ This packages leverages [Chainlist's](https://github.com/DefiLlama/chainlist) ne
 - Fully configurable and extendable
 - Only uses endpoints which Chainlist report as tracking _no_ data (see [`extraRpcs.js`](https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js))
  
-## Installation
+## Installation 
 
 ```bash
 yarn add @ubiquity-dao/rpc-handler
