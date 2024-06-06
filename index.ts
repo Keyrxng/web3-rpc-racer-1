@@ -43,6 +43,7 @@ import {
 } from "./types/constants";
 
 import { RPCHandler } from "./types/rpc-handler";
+import { PrettyLogs } from "./types/logs";
 
 export {
   LOCAL_HOST,
@@ -74,4 +75,4 @@ export type {
   Tokens,
   ValidBlockData,
 };
-export { RPCHandler };
+export { RPCHandler, PrettyLogs };

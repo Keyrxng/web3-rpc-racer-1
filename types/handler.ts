@@ -1,5 +1,6 @@
 import { JsonRpcProvider } from "@ethersproject/providers";
 import { ChainId, networkCurrencies, networkExplorers, networkIds, networkNames, networkRpcs, tokens } from "./constants";
+import { PrettyLogs, PrettyLogsWithOk } from "./logs";
 
 export type ValidBlockData = {
   jsonrpc: string;
@@ -34,9 +35,9 @@ type ModuleName = "[RPCHandler Provider Proxy] -> ";
 type ProxySettings = {
   retryCount: number;
   retryDelay: number;
-  logTier: "info" | "warn" | "error";
-  appName?: ModuleName & string;
-  logFunction?: (message: string, obj: unknown) => void;
+  logTier: PrettyLogsWithOk | null;
+  logger: PrettyLogs;
+  moduleName?: ModuleName & string;
 };
 
 export type HandlerConstructorConfig = {

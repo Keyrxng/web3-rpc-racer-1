@@ -1,5 +1,5 @@
 import { JsonRpcProvider } from "@ethersproject/providers";
-import { RPCHandler, HandlerConstructorConfig } from "../dist";
+import { RPCHandler, HandlerConstructorConfig, PrettyLogs } from "../dist";
 
 export const testConfig: HandlerConstructorConfig = {
   networkId: 1,
@@ -13,6 +13,7 @@ export const testConfig: HandlerConstructorConfig = {
     retryCount: 3,
     retryDelay: 500,
     logTier: "info",
+    logger: new PrettyLogs(),
   },
 };
 
