@@ -8,7 +8,7 @@ export type ChainId<T extends string | number = number> = T extends keyof typeof
 export const permit2Address = "0x000000000022D473030F116dDEE9F6B43aC78BA3";
 export const nftAddress = "0xAa1bfC0e51969415d64d6dE74f27CDa0587e645b";
 export const LOCAL_HOST = "http://127.0.0.1:8545";
-
+export const LOCAL_HOST_2 = "http://localhost:8546";
 export const networkIds: Record<ChainNames[keyof ChainNames], ChainId> = Object.fromEntries(
   Object.entries(chainIDList).map(([id, name]) => {
     const chainId = parseInt(id);
@@ -17,6 +17,11 @@ export const networkIds: Record<ChainNames[keyof ChainNames], ChainId> = Object.
   })
 );
 
+networkIds.LocalHost = 31337;
+networkIds.localHost = 1337;
+networkIds.localhost = 31338;
+networkIds.Anvil = 31337;
+
 export const networkNames: ChainNames = Object.fromEntries(
   Object.entries(networkIds).map(([name, id]) => {
     const chainName = name.charAt(0).toUpperCase() + name.slice(1);
@@ -24,12 +29,20 @@ export const networkNames: ChainNames = Object.fromEntries(
   })
 );
 
+networkNames[1337] = "Hardhat";
+networkNames[31337] = "Anvil";
+networkNames[31338] = "Localhost";
+
 export const networkRpcs: Record<ChainId, string[]> = Object.fromEntries(
   Object.entries(networkIds).map(([, value]) => {
     const chainRpcs = extraRpcs[value] || [];
     return [value, chainRpcs];
   })
 );
+
+networkRpcs[31337] = [LOCAL_HOST, LOCAL_HOST_2];
+networkRpcs[1337] = [LOCAL_HOST, LOCAL_HOST_2];
+networkRpcs[31338] = [LOCAL_HOST, LOCAL_HOST_2];
 
 export const tokens: Record<ChainId, Record<Token["symbol"], Token>> = {
   [networkIds.Mainnet]: {
