@@ -25,6 +25,9 @@ import getRPCHandler, { HandlerConstructorConfig, RPCHandler } from "../dist/";
       retryCount: 3,
       retryDelay: 500,
       logTier: "info",
+      logger: null,
+      strictLogs: false,
+      moduleName: "[RPCHandler Provider Test] -> ",
     },
   };
 
