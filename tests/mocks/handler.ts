@@ -1,6 +1,7 @@
 import { JsonRpcProvider } from "@ethersproject/providers";
 import { networkCurrencies, networkExplorers, networkRpcs } from "../../types/constants";
 import { CHAINS_IDS, EXTRA_RPCS } from "../../types/dynamic";
+import { PrettyLogs, PrettyLogsWithOk } from "./logs";
 
 export type BlockExplorer = {
   name: string;
@@ -38,6 +39,17 @@ export type HandlerInterface = {
   testRpcPerformance(): Promise<JsonRpcProvider | null>;
 };
 
+type ModuleName = "[RPCHandler Provider Proxy] -> ";
+
+type ProxySettings = {
+  retryCount: number;
+  retryDelay: number;
+  logTier: PrettyLogsWithOk | null;
+  logger: PrettyLogs | null;
+  strictLogs: boolean;
+  moduleName?: ModuleName | string;
+};
+
 export type HandlerConstructorConfig = {
   networkId: NetworkId;
   networkName: NetworkName | null;
@@ -46,6 +58,7 @@ export type HandlerConstructorConfig = {
   cacheRefreshCycles: number | null;
   runtimeRpcs: string[] | null;
   rpcTimeout: number | null;
+  proxySettings: ProxySettings;
 };
 
 export type NetworkRPCs = typeof networkRpcs;

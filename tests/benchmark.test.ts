@@ -14,6 +14,7 @@ export const testConfig: HandlerConstructorConfig = {
     retryDelay: 500,
     logTier: "info",
     logger: new PrettyLogs(),
+    strictLogs: true,
   },
 };
 
