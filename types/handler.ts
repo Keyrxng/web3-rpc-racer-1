@@ -35,9 +35,10 @@ type ModuleName = "[RPCHandler Provider Proxy] -> ";
 type ProxySettings = {
   retryCount: number;
   retryDelay: number;
-  logTier: PrettyLogsWithOk | null;
-  logger: PrettyLogs;
-  moduleName?: ModuleName & string;
+  logTier: (PrettyLogsWithOk & {}) | null;
+  logger: PrettyLogs | null;
+  strictLogs: boolean;
+  moduleName?: ModuleName | string;
 };
 
 export type HandlerConstructorConfig = {
