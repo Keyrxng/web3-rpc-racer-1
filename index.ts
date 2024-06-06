@@ -44,6 +44,8 @@ import {
 
 import { RPCHandler } from "./types/rpc-handler";
 import { PrettyLogs } from "./types/logs";
+import { StorageService } from "./types/storage-service";
+import { RPCService } from "./types/rpc-service";
 
 export {
   LOCAL_HOST,
@@ -75,4 +77,4 @@ export type {
   Tokens,
   ValidBlockData,
 };
-export { RPCHandler, PrettyLogs };
+export { RPCHandler, PrettyLogs, StorageService, RPCService };
