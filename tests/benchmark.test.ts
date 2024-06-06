@@ -9,6 +9,11 @@ export const testConfig: HandlerConstructorConfig = {
   networkRpcs: null,
   rpcTimeout: 1500,
   runtimeRpcs: null,
+  proxySettings: {
+    retryCount: 3,
+    retryDelay: 500,
+    logTier: "info",
+  },
 };
 
 describe("RPCHandler", () => {
