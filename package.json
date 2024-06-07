@@ -24,6 +24,7 @@
     "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist && rm -rf dist/src",
     "build": "rm -rf dist && tsx build/esbuild-build.ts && yarn build:types",
     "postinstall": "git submodule update --init --recursive",
+    "test:anvil": "npx tsx ./tests/anvil.ts",
     "test": "rm -rf dist && yarn build && jest --forceExit --detectOpenHandles"
   },
   "keywords": [
