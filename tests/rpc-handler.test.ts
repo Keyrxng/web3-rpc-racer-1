@@ -7,7 +7,7 @@ export const testConfig: HandlerConstructorConfig = {
   cacheRefreshCycles: 3,
   networkName: null,
   networkRpcs: null,
-  rpcTimeout: 300,
+  rpcTimeout: 600,
   runtimeRpcs: null,
   proxySettings: {
     retryCount: 3,

@@ -1,10 +1,10 @@
-import { ValidBlockData } from "./handler";
+import { NetworkId, ValidBlockData } from "./handler";
 import axios from "axios";
 type PromiseResult = { success: boolean; rpcUrl: string; duration: number };
 
 export class RPCService {
   static async testRpcPerformance(
-    networkId: number,
+    networkId: NetworkId,
     latencies: Record<string, number>,
     runtimeRpcs: string[],
     rpcHeader: object,
