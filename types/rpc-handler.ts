@@ -95,7 +95,6 @@ export class RPCHandler implements HandlerInterface {
         if (typeof target[prop] !== "function") {
           return target[prop];
         }
-
         if (typeof target[prop] === "function") {
           // eslint-disable-next-line sonarjs/cognitive-complexity -- 16/15 is acceptable
           return async function (...args: unknown[]) {
@@ -109,7 +108,6 @@ export class RPCHandler implements HandlerInterface {
                   `[${handler.proxySettings.moduleName}] Successfully called provider method ${prop}`,
                   handler.metadataMaker(response, prop as string, args, { rpc: target.connection.url })
                 );
-
                 return response;
               }
             } catch (e) {
@@ -174,8 +172,7 @@ export class RPCHandler implements HandlerInterface {
                       `[${handler.proxySettings.moduleName}] Failed to call provider method ${prop} after ${handler._proxySettings.retryCount} attempts`,
                       handler.metadataMaker(e, prop as string, args)
                     );
-                    res = e;
-                    loops = 0;
+                    throw e;
                   } else {
                     handler.log("debug", `[${handler.proxySettings.moduleName}] Retrying in ${handler._proxySettings.retryDelay}ms...`);
                     handler.log("debug", `[${handler.proxySettings.moduleName}] Call number: ${handler._proxySettings.retryCount - loops + 1}`);
