@@ -1,7 +1,7 @@
 # `@ubiquity/rpc-handler`
 
 This packages leverages [Chainlist's](https://github.com/DefiLlama/chainlist) network RPC list to return the lowest latency provider from the list for any given network ID.
-
+ 
 ## Features
 
 - Returns the lowest latency provider for a given network ID
