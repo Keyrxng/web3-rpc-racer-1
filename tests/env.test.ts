@@ -1,5 +1,21 @@
-import { RPCHandler } from "../dist";
-import { testConfig } from "./rpc-handler.test";
+import { HandlerConstructorConfig, PrettyLogs, RPCHandler } from "../dist";
+
+export const testConfig: HandlerConstructorConfig = {
+  networkId: "100",
+  autoStorage: false,
+  cacheRefreshCycles: 3,
+  networkName: null,
+  networkRpcs: null,
+  rpcTimeout: 600,
+  runtimeRpcs: null,
+  proxySettings: {
+    retryCount: 3,
+    retryDelay: 10,
+    logTier: "info",
+    logger: new PrettyLogs(),
+    strictLogs: true,
+  },
+};
 
 describe("Browser env detection", () => {
   // @ts-expect-error globalThis
