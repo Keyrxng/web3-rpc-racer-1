@@ -1,5 +1,5 @@
 import { JsonRpcProvider } from "@ethersproject/providers";
-import { LOCAL_HOST, networkRpcs, networkIds } from "./constants";
+import { LOCAL_HOST, networkRpcs, networkIds, LOCAL_HOST_2 } from "./constants";
 import { HandlerInterface, HandlerConstructorConfig, NetworkId, NetworkName } from "./handler";
 import { Metadata, PrettyLogs, PrettyLogsWithOk } from "./logs";
 import { RPCService } from "./rpc-service";
@@ -150,7 +150,7 @@ export class RPCHandler implements HandlerInterface {
                       url: rpc.split("__")[1],
                       skipFetchSetup: true,
                     },
-                    handler._networkId
+                    Number(handler._networkId)
                   );
                   const response = (await (newProvider[prop] as (...args: unknown[]) => Promise<unknown>)(...args)) as { result?: unknown; error?: unknown };
 
@@ -229,7 +229,7 @@ export class RPCHandler implements HandlerInterface {
 
     await this._testRpcPerformance();
 
-    const fastestRpcUrl = await RPCService.findFastestRpc(this._latencies, Number(this._networkId));
+    const fastestRpcUrl = await RPCService.findFastestRpc(this._latencies, this._networkId);
 
     if (!fastestRpcUrl) {
       throw this.log(
@@ -294,11 +294,11 @@ export class RPCHandler implements HandlerInterface {
     return this._runtimeRpcs;
   }
 
-  public getNetworkId() {
+  public getNetworkId(): NetworkId {
     return this._networkId;
   }
 
-  public getNetworkName() {
+  public getNetworkName(): NetworkName {
     return this._networkName;
   }
 
@@ -324,12 +324,6 @@ export class RPCHandler implements HandlerInterface {
       this._latencies,
       this._runtimeRpcs,
       { "Content-Type": "application/json" },
-      JSON.stringify({
-        jsonrpc: "2.0",
-        method: "eth_getBlockByNumber",
-        params: ["latest", false],
-        id: 1,
-      }),
       this._rpcTimeout
     );
 
@@ -401,17 +395,6 @@ export class RPCHandler implements HandlerInterface {
       this._networkName = config.networkName;
     }
 
-    if (config.networkRpcs) {
-      if (this._networkId === "31337") {
-        this._networkRpcs = [LOCAL_HOST];
-      }
-      this._networkRpcs = [...this._networkRpcs, ...config.networkRpcs];
-    }
-
-    if (config.runtimeRpcs) {
-      this._runtimeRpcs = config.runtimeRpcs;
-    }
-
     if (config.cacheRefreshCycles) {
       this._cacheRefreshCycles = config.cacheRefreshCycles;
     }
@@ -432,8 +415,7 @@ export class RPCHandler implements HandlerInterface {
     if (config.networkRpcs && config.networkRpcs.length > 0) {
       if (this._networkId === "31337" || this._networkId === "1337") {
         this._networkRpcs = [`${LOCAL_HOST}`, `${LOCAL_HOST_2}`];
-      }
-      if (this._networkRpcs?.length > 0) {
+      } else if (this._networkRpcs?.length > 0) {
         this._networkRpcs = [...this._networkRpcs, ...config.networkRpcs];
       } else {
         this._networkRpcs = config.networkRpcs;
@@ -442,10 +424,8 @@ export class RPCHandler implements HandlerInterface {
 
     if (config.runtimeRpcs && config.runtimeRpcs.length > 0) {
       if (this._networkId === "31337" || this._networkId === "1337") {
-        this._runtimeRpcs = [`${LOCAL_HOST}`, `${LOCAL_HOST_2}`];
-      }
-
-      if (this._runtimeRpcs?.length > 0) {
+        this._runtimeRpcs = [`${LOCAL_HOST}`, `${LOCAL_HOST_2}`, ...config.runtimeRpcs];
+      } else if (this._runtimeRpcs?.length > 0) {
         this._runtimeRpcs = [...this._runtimeRpcs, ...config.runtimeRpcs];
       } else {
         this._runtimeRpcs = config.runtimeRpcs;

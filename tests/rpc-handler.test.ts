@@ -72,28 +72,34 @@ describe("RPCHandler", () => {
 
   describe("getFastestRpcProvider", () => {
     it("should return the fastest RPC compared to the latencies", async () => {
-      provider = await rpcHandler.getFastestRpcProvider();
-      const fastestRpc = rpcHandler.getProvider();
-      const latencies = rpcHandler.getLatencies();
-      console.log(`latencies: `, latencies);
-      console.log(`fastestRpc: `, fastestRpc);
-      expect(provider._network.chainId).toBe(Number(testConfig.networkId));
-      expect(provider.connection.url).toMatch("https://");
-      const latArrLen = Array.from(Object.entries(latencies)).length;
-      const runtime = rpcHandler.getRuntimeRpcs();
-      expect(runtime.length).toBeGreaterThan(0);
-      expect(runtime.length).toBe(latArrLen);
-      expect(runtime.length).toBeLessThanOrEqual(networkRpcs[testConfig.networkId].length);
+      await jest.isolateModulesAsync(async () => {
+        const module = await import("../dist");
+        rpcHandler = new module.RPCHandler({
+          ...testConfig,
+          rpcTimeout: 99999999,
+        });
 
-      expect(latArrLen).toBeGreaterThanOrEqual(1);
+        provider = await rpcHandler.getFastestRpcProvider();
+        const fastestRpc = rpcHandler.getProvider();
+        const latencies = rpcHandler.getLatencies();
+        expect(provider._network.chainId).toBe(Number(testConfig.networkId));
+        expect(provider.connection.url).toMatch("https://");
+        const latArrLen = Array.from(Object.entries(latencies)).length;
+        const runtime = rpcHandler.getRuntimeRpcs();
+        expect(runtime.length).toBeGreaterThan(0);
+        expect(runtime.length).toBe(latArrLen);
+        expect(runtime.length).toBeLessThanOrEqual(networkRpcs[testConfig.networkId].length);
 
-      if (latArrLen > 1) {
-        const sorted = Object.entries(latencies).sort((a, b) => a[1] - b[1]);
-        const first = sorted[0];
-        const last = sorted[sorted.length - 1];
-        expect(first[1]).toBeLessThan(last[1]);
-      }
-      expect(fastestRpc.connection.url).toBe(provider.connection.url);
+        expect(latArrLen).toBeGreaterThanOrEqual(1);
+
+        if (latArrLen > 1) {
+          const sorted = Object.entries(latencies).sort((a, b) => a[1] - b[1]);
+          const first = sorted[0];
+          const last = sorted[sorted.length - 1];
+          expect(first[1]).toBeLessThan(last[1]);
+        }
+        expect(fastestRpc.connection.url).toBe(provider.connection.url);
+      });
     });
   });
 });

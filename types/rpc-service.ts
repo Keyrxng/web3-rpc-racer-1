@@ -2,7 +2,14 @@ import { NetworkId, ValidBlockData } from "./handler";
 import axios from "axios";
 type PromiseResult = { success: boolean; rpcUrl: string; duration: number };
 
-async function makeRpcRequest(rpcUrl: string, rpcBody: any, rpcTimeout: number, rpcHeader: any): Promise<PromiseResult> {
+const rpcBody = JSON.stringify({
+  jsonrpc: "2.0",
+  method: "eth_getBlockByNumber",
+  params: ["latest", false],
+  id: 1,
+})
+
+async function makeRpcRequest(rpcUrl: string, rpcTimeout: number, rpcHeader: object): Promise<PromiseResult> {
   const abortController = new AbortController();
   const instance = axios.create({
     timeout: rpcTimeout,
@@ -39,10 +46,9 @@ export class RPCService {
     latencies: Record<string, number>,
     runtimeRpcs: string[],
     rpcHeader: object,
-    rpcBody: string,
     rpcTimeout: number
   ): Promise<{ latencies: Record<string, number>; runtimeRpcs: string[] }> {
-    const successfulPromises = runtimeRpcs.map(rpcUrl => makeRpcRequest(rpcUrl, rpcBody, rpcTimeout, rpcHeader));
+    const successfulPromises = runtimeRpcs.map(rpcUrl => makeRpcRequest(rpcUrl, rpcTimeout, rpcHeader));
 
     const fastest = await Promise.race(successfulPromises);
 
@@ -67,10 +73,7 @@ export class RPCService {
     return { latencies, runtimeRpcs };
   }
 
-  static async findFastestRpc(latencies: Record<string, number>, networkId: number): Promise<string | null> {
-    if (Object.keys(latencies).length === 0) {
-      throw new Error("[RPCService] No latencies found");
-    }
+  static async findFastestRpc(latencies: Record<string, number>, networkId: NetworkId): Promise<string | null> {
     try {
       const validLatencies: Record<string, number> = Object.entries(latencies)
         .filter(([key]) => key.startsWith(`${networkId}__`))

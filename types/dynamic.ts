@@ -242,6 +242,7 @@ export const CHAINS_IDS = {
   "336": "shiden",
   "338": "cronos-testnet",
   "345": "tsc-mainnet",
+  "360": "shape",
   "361": "theta-mainnet",
   "363": "theta-sapphire-testnet",
   "364": "theta-amber-testnet",
@@ -1098,6 +1099,7 @@ export const CHAINS_IDS = {
   "32990": "zilliqa-evm-isolated-server",
   "33033": "entangle-mainnet",
   "33101": "zilliqa-evm-testnet",
+  "33103": "zilliqa-2-evm-proto-testnet",
   "33133": "entangle-testnet",
   "33210": "cloudverse-subnet",
   "33333": "aves-mainnet",
@@ -1395,6 +1397,7 @@ export const CHAINS_IDS = {
   "471100": "patex-sepolia-testnet",
   "473861": "ultra-pro-mainnet",
   "474142": "openchain-mainnet",
+  "490000": "autonomys-testnet-nova-domain",
   "504441": "playdapp-network",
   "512512": "cmp-testnet",
   "513100": "dischain",
@@ -1606,8 +1609,8 @@ export const NETWORKS = {
   "bnb-smart-chain-mainnet": 56,
   "arbitrum-one": 42161,
   "base": 8453,
-  "avalanche-c-chain": 43114,
   "polygon-mainnet": 137,
+  "avalanche-c-chain": 43114,
   "linea": 59144,
   "op-mainnet": 10,
   "cronos-mainnet": 25,
@@ -1616,25 +1619,25 @@ export const NETWORKS = {
   "pulsechain": 369,
   "filecoin---mainnet": 314,
   "kava": 2222,
-  "fantom-opera": 250,
   "rootstock-mainnet": 30,
+  "fantom-opera": 250,
   "celo-mainnet": 42220,
   "fusion-mainnet": 32659,
-  "metis-andromeda-mainnet": 1088,
   "core-blockchain-mainnet": 1116,
+  "metis-andromeda-mainnet": 1088,
   "klaytn-mainnet-cypress": 8217,
   "manta-pacific-mainnet": 169,
   "moonbeam": 1284,
-  "iotex-network-mainnet": 4689,
-  "telos-evm-mainnet": 40,
   "astar": 592,
+  "telos-evm-mainnet": 40,
+  "iotex-network-mainnet": 4689,
   "canto": 7700,
   "conflux-espace": 1030,
   "aurora-mainnet": 1313161554,
   "xdc-network": 50,
-  "okxchain-mainnet": 66,
   "meter-mainnet": 82,
   "moonriver": 1285,
+  "okxchain-mainnet": 66,
   "carbon-evm": 9790,
   "boba-network": 288,
   "huobi-eco-chain-mainnet": 128,
@@ -1642,30 +1645,31 @@ export const NETWORKS = {
   "ultron-mainnet": 1231,
   "songbird-canary-network": 19,
   "wanchain": 888,
+  "vision---mainnet": 888888,
   "zilliqa-evm": 32769,
   "beam": 4337,
-  "vision---mainnet": 888888,
   "elastos-smart-chain": 20,
   "oasys-mainnet": 248,
   "onus-chain-mainnet": 1975,
-  "evmos": 9001,
   "dogechain-mainnet": 2000,
   "coinex-smart-chain-mainnet": 52,
   "fuse-mainnet": 122,
   "harmony-mainnet-shard-0": 1666600000,
+  "evmos": 9001,
   "theta-mainnet": 361,
   "kcc-mainnet": 321,
   "velas-evm-mainnet": 106,
   "oasis-emerald": 42262,
   "rollux-mainnet": 570,
   "thundercore-mainnet": 108,
-  "neon-evm-mainnet": 245022934,
   "ethereum-classic": 1,
   "energy-web-chain": 246,
   "step-network": 1234,
   "opbnb-mainnet": 204,
   "nahmii-2-mainnet": 5551,
+  "omax-mainnet": 311,
   "tomb-chain-mainnet": 6969,
+  "neon-evm-mainnet": 245022934,
   "godwoken-mainnet": 71402,
   "loopnetwork-mainnet": 15551,
   "shiden": 336,
@@ -1879,7 +1883,6 @@ export const NETWORKS = {
   "lovely-network-testnet": 307,
   "furtheon": 308,
   "wyzth-testnet": 309,
-  "omax-mainnet": 311,
   "neurochain-mainnet": 313,
   "kcc-testnet": 322,
   "cosvm-mainnet": 323,
@@ -1888,6 +1891,7 @@ export const NETWORKS = {
   "dfk-chain-test": 335,
   "cronos-testnet": 338,
   "tsc-mainnet": 16,
+  "shape": 360,
   "theta-sapphire-testnet": 363,
   "theta-amber-testnet": 364,
   "theta-testnet": 365,
@@ -2711,6 +2715,7 @@ export const NETWORKS = {
   "zilliqa-evm-isolated-server": 32990,
   "entangle-mainnet": 33033,
   "zilliqa-evm-testnet": 33101,
+  "zilliqa-2-evm-proto-testnet": 33103,
   "entangle-testnet": 33133,
   "cloudverse-subnet": 33210,
   "aves-mainnet": 33333,
@@ -3000,6 +3005,7 @@ export const NETWORKS = {
   "patex-sepolia-testnet": 471100,
   "ultra-pro-mainnet": 473861,
   "openchain-mainnet": 474142,
+  "autonomys-testnet-nova-domain": 490000,
   "playdapp-network": 504441,
   "cmp-testnet": 512512,
   "dischain": 513100,
@@ -10316,6 +10322,13 @@ export const NETWORK_EXPLORERS = {
       "standard": "none"
     }
   ],
+  "33103": [
+    {
+      "name": "Zilliqa 2 EVM proto-testnet explorer",
+      "url": "https://explorer.zq2-prototestnet.zilliqa.com",
+      "standard": "EIP3091"
+    }
+  ],
   "33210": [
     {
       "name": "CLOUDVERSE Explorer",
@@ -12279,6 +12292,14 @@ export const NETWORK_EXPLORERS = {
       "standard": "none"
     }
   ],
+  "490000": [
+    {
+      "name": "astral",
+      "url": "https://nova.subspace.network",
+      "icon": "blockscout",
+      "standard": "EIP3091"
+    }
+  ],
   "504441": [
     {
       "name": "Playdapp Explorer",
@@ -13608,2438 +13629,6 @@ export const NETWORK_EXPLORERS = {
   ]
 };
 
-export const NETWORK_FAUCETS = {
-  "1": [],
-  "2": [],
-  "3": [
-    "http://fauceth.komputing.org?chain=3&address=${ADDRESS}",
-    "https://faucet.ropsten.be?${ADDRESS}"
-  ],
-  "4": [
-    "http://fauceth.komputing.org?chain=4&address=${ADDRESS}",
-    "https://faucet.rinkeby.io"
-  ],
-  "5": [
-    "http://fauceth.komputing.org?chain=5&address=${ADDRESS}",
-    "https://goerli-faucet.slock.it?address=${ADDRESS}",
-    "https://faucet.goerli.mudit.blog"
-  ],
-  "7": [],
-  "8": [],
-  "9": [],
-  "10": [],
-  "11": [],
-  "12": [],
-  "13": [],
-  "14": [],
-  "15": [],
-  "16": [
-    "https://faucet.flare.network"
-  ],
-  "17": [],
-  "18": [
-    "https://faucet-testnet.thundercore.com"
-  ],
-  "19": [],
-  "20": [],
-  "21": [
-    "https://esc-faucet.elastos.io/"
-  ],
-  "22": [],
-  "23": [],
-  "24": [],
-  "25": [],
-  "26": [],
-  "27": [],
-  "29": [],
-  "30": [],
-  "31": [
-    "https://faucet.rsk.co/"
-  ],
-  "32": [],
-  "33": [],
-  "34": [],
-  "35": [],
-  "36": [],
-  "37": [],
-  "38": [],
-  "39": [],
-  "40": [],
-  "41": [
-    "https://app.telos.net/testnet/developers"
-  ],
-  "42": [],
-  "43": [
-    "https://docs.darwinia.network/pangolin-testnet-1e9ac8b09e874e8abd6a7f18c096ca6a"
-  ],
-  "44": [],
-  "45": [
-    "https://docs.darwinia.network/pangoro-testnet-70cfec5dc9ca42759959ba3803edaec2"
-  ],
-  "46": [],
-  "47": [],
-  "48": [],
-  "49": [],
-  "50": [],
-  "51": [
-    "https://faucet.apothem.network"
-  ],
-  "52": [],
-  "53": [],
-  "54": [],
-  "55": [],
-  "56": [],
-  "57": [
-    "https://faucet.syscoin.org"
-  ],
-  "58": [],
-  "60": [],
-  "61": [],
-  "63": [
-    "https://easy.hebeswap.com/#/faucet",
-    "https://faucet.mordortest.net"
-  ],
-  "64": [],
-  "65": [
-    "https://www.okex.com/drawdex"
-  ],
-  "66": [],
-  "67": [],
-  "68": [],
-  "69": [
-    "http://fauceth.komputing.org?chain=69&address=${ADDRESS}"
-  ],
-  "70": [],
-  "71": [
-    "https://faucet.confluxnetwork.org"
-  ],
-  "72": [
-    "https://faucet.dxscan.io"
-  ],
-  "73": [
-    "https://faucet-testnet.fncy.world"
-  ],
-  "74": [],
-  "75": [],
-  "76": [],
-  "77": [],
-  "78": [],
-  "79": [],
-  "80": [],
-  "81": [],
-  "82": [
-    "https://faucet.meter.io"
-  ],
-  "83": [
-    "https://faucet-warringstakes.meter.io"
-  ],
-  "84": [],
-  "85": [
-    "https://www.gatescan.org/testnet/faucet"
-  ],
-  "86": [
-    "https://www.gatescan.org/faucet"
-  ],
-  "87": [],
-  "88": [],
-  "89": [],
-  "90": [],
-  "91": [],
-  "92": [],
-  "93": [],
-  "94": [],
-  "95": [
-    "https://faucet.camdl.gov.kh/"
-  ],
-  "96": [],
-  "97": [
-    "https://testnet.bnbchain.org/faucet-smart"
-  ],
-  "98": [],
-  "99": [],
-  "100": [
-    "https://gnosisfaucet.com",
-    "https://stakely.io/faucet/gnosis-chain-xdai",
-    "https://faucet.prussia.dev/xdai"
-  ],
-  "101": [],
-  "102": [],
-  "103": [],
-  "104": [],
-  "105": [],
-  "106": [],
-  "107": [
-    "https://faucet.novanetwork.io"
-  ],
-  "108": [],
-  "109": [],
-  "110": [],
-  "111": [
-    "https://etherlite.org/faucets"
-  ],
-  "112": [],
-  "113": [
-    "https://buy.dehvo.com"
-  ],
-  "114": [
-    "https://faucet.flare.network"
-  ],
-  "117": [],
-  "118": [],
-  "119": [],
-  "120": [
-    "http://faucet.nuls.io"
-  ],
-  "121": [],
-  "122": [],
-  "123": [
-    "https://get.fusespark.io"
-  ],
-  "124": [],
-  "125": [
-    "https://faucet.oychain.io"
-  ],
-  "126": [],
-  "127": [],
-  "128": [],
-  "129": [],
-  "131": [],
-  "132": [],
-  "133": [],
-  "134": [],
-  "135": [
-    "https://faucet.alyxchain.com"
-  ],
-  "136": [],
-  "137": [],
-  "138": [],
-  "139": [],
-  "140": [],
-  "141": [],
-  "142": [],
-  "144": [],
-  "145": [],
-  "147": [],
-  "148": [],
-  "150": [
-    "https://faucet.sixprotocol.net"
-  ],
-  "151": [],
-  "152": [],
-  "153": [],
-  "154": [],
-  "155": [
-    "https://faucet.testnet.tenet.org"
-  ],
-  "156": [],
-  "157": [
-    "https://beta.shibariumtech.com/faucet"
-  ],
-  "158": [],
-  "159": [],
-  "160": [],
-  "161": [],
-  "162": [
-    "https://discuss.lightstreams.network/t/request-test-tokens"
-  ],
-  "163": [],
-  "164": [],
-  "166": [],
-  "167": [],
-  "168": [],
-  "169": [],
-  "170": [
-    "https://faucet-testnet.hscscan.com/"
-  ],
-  "172": [
-    "https://faucet.latam-blockchain.com"
-  ],
-  "176": [],
-  "180": [],
-  "181": [],
-  "185": [],
-  "186": [],
-  "188": [],
-  "189": [],
-  "191": [],
-  "193": [],
-  "195": [
-    "https://www.okx.com/xlayer/faucet"
-  ],
-  "196": [],
-  "197": [
-    "https://neutrinoschain.com/faucet"
-  ],
-  "198": [],
-  "199": [],
-  "200": [],
-  "201": [],
-  "202": [],
-  "204": [],
-  "206": [],
-  "207": [],
-  "208": [],
-  "210": [],
-  "211": [
-    "http://faucet.freight.sh"
-  ],
-  "212": [
-    "https://faucet.mapprotocol.io"
-  ],
-  "213": [],
-  "214": [],
-  "217": [],
-  "220": [
-    "https://faucet.scalind.com"
-  ],
-  "223": [],
-  "224": [
-    "https://faucet.vrd.network"
-  ],
-  "225": [],
-  "226": [],
-  "228": [],
-  "230": [],
-  "234": [
-    "https://protojumbo.jumbochain.org/faucet-smart"
-  ],
-  "236": [
-    "https://faucet.deamchain.com"
-  ],
-  "242": [],
-  "246": [],
-  "248": [],
-  "250": [],
-  "252": [],
-  "255": [],
-  "256": [
-    "https://scan-testnet.hecochain.com/faucet"
-  ],
-  "258": [],
-  "259": [],
-  "262": [],
-  "266": [],
-  "267": [
-    "https://testnet.neuraprotocol.io/faucet"
-  ],
-  "268": [],
-  "269": [
-    "https://myhpbwallet.com/"
-  ],
-  "271": [],
-  "274": [],
-  "278": [],
-  "279": [],
-  "282": [
-    "https://zkevm.cronos.org/faucet"
-  ],
-  "288": [],
-  "291": [],
-  "295": [],
-  "296": [
-    "https://portal.hedera.com"
-  ],
-  "297": [
-    "https://portal.hedera.com"
-  ],
-  "298": [],
-  "300": [],
-  "302": [],
-  "303": [],
-  "305": [],
-  "307": [
-    "https://faucet.lovely.network"
-  ],
-  "308": [],
-  "309": [],
-  "311": [
-    "https://faucet.omaxray.com/"
-  ],
-  "313": [],
-  "314": [],
-  "321": [],
-  "322": [
-    "https://faucet-testnet.kcc.network"
-  ],
-  "323": [],
-  "324": [],
-  "333": [],
-  "335": [],
-  "336": [],
-  "338": [
-    "https://cronos.org/faucet"
-  ],
-  "345": [],
-  "361": [],
-  "363": [],
-  "364": [],
-  "365": [],
-  "369": [],
-  "371": [],
-  "380": [],
-  "381": [],
-  "385": [
-    "https://pipa.lisinski.online"
-  ],
-  "395": [
-    "https://faucet.testnet.camdl.gov.kh/"
-  ],
-  "397": [],
-  "398": [],
-  "399": [],
-  "400": [
-    "https://faucet.hyperonchain.com"
-  ],
-  "401": [],
-  "404": [],
-  "411": [],
-  "416": [],
-  "418": [
-    "https://faucet.lachain.network"
-  ],
-  "420": [],
-  "422": [],
-  "424": [],
-  "427": [],
-  "428": [],
-  "434": [],
-  "443": [],
-  "444": [],
-  "456": [],
-  "462": [],
-  "463": [],
-  "499": [],
-  "500": [],
-  "501": [],
-  "510": [],
-  "512": [],
-  "513": [
-    "https://scan-testnet.acuteangle.com/faucet"
-  ],
-  "516": [],
-  "520": [
-    "https://xsc.pub/faucet"
-  ],
-  "529": [],
-  "530": [],
-  "534": [],
-  "537": [],
-  "542": [],
-  "545": [
-    "https://testnet-faucet.onflow.org"
-  ],
-  "555": [],
-  "558": [],
-  "568": [
-    "https://faucet.dogechain.dog"
-  ],
-  "570": [
-    "https://rollux.id/faucetapp"
-  ],
-  "571": [],
-  "579": [],
-  "592": [],
-  "595": [],
-  "596": [],
-  "597": [],
-  "600": [],
-  "601": [
-    "https://vne.network/rose"
-  ],
-  "612": [],
-  "614": [],
-  "634": [],
-  "646": [
-    "https://previewnet-faucet.onflow.org"
-  ],
-  "647": [
-    "https://faucet.toronto.sx.technology"
-  ],
-  "648": [],
-  "653": [],
-  "654": [],
-  "662": [],
-  "666": [
-    "https://chain.pixie.xyz/faucet"
-  ],
-  "667": [],
-  "668": [],
-  "669": [
-    "https://faucet-testnet.juncachain.com"
-  ],
-  "686": [],
-  "690": [],
-  "700": [],
-  "701": [],
-  "707": [],
-  "708": [
-    "https://faucet.bcsdev.io"
-  ],
-  "710": [],
-  "713": [],
-  "719": [],
-  "721": [],
-  "727": [],
-  "730": [],
-  "741": [
-    "https://faucet.vention.network"
-  ],
-  "742": [],
-  "747": [],
-  "766": [],
-  "776": [
-    "https://faucet.openchain.info/"
-  ],
-  "777": [],
-  "786": [],
-  "787": [],
-  "788": [
-    "https://faucet.aerochain.id/"
-  ],
-  "789": [],
-  "799": [
-    "https://faucet.testnet.rupaya.io"
-  ],
-  "800": [
-    "https://faucet.lucidcoin.io"
-  ],
-  "803": [],
-  "808": [],
-  "810": [
-    "https://www.haven1.org/faucet"
-  ],
-  "813": [],
-  "814": [],
-  "818": [],
-  "820": [],
-  "822": [
-    "https://faucet.runic.build"
-  ],
-  "831": [],
-  "841": [],
-  "842": [],
-  "859": [],
-  "868": [],
-  "876": [],
-  "877": [
-    "https://faucet.dexit.network"
-  ],
-  "880": [],
-  "888": [],
-  "898": [
-    "https://faucet.maxi.network"
-  ],
-  "899": [],
-  "900": [
-    "https://faucet-testnet.garizon.com"
-  ],
-  "901": [
-    "https://faucet-testnet.garizon.com"
-  ],
-  "902": [
-    "https://faucet-testnet.garizon.com"
-  ],
-  "903": [
-    "https://faucet-testnet.garizon.com"
-  ],
-  "909": [],
-  "910": [],
-  "911": [],
-  "917": [
-    "https://faucet.thefirechain.com"
-  ],
-  "919": [
-    "https://sepoliafaucet.com/"
-  ],
-  "927": [],
-  "943": [
-    "https://faucet.v4.testnet.pulsechain.com/"
-  ],
-  "956": [],
-  "957": [],
-  "963": [],
-  "969": [],
-  "970": [],
-  "971": [],
-  "972": [],
-  "977": [
-    "https://faucet.nepalblockchain.network"
-  ],
-  "979": [],
-  "980": [],
-  "985": [
-    "https://faucet.metamemo.one/"
-  ],
-  "989": [],
-  "990": [
-    "https://faucet.eliberty.ngo"
-  ],
-  "997": [
-    "https://explorer.5ire.network/faucet"
-  ],
-  "998": [],
-  "999": [],
-  "1000": [],
-  "1001": [
-    "https://baobab.wallet.klaytn.com/access?next=faucet"
-  ],
-  "1003": [],
-  "1004": [],
-  "1007": [],
-  "1008": [],
-  "1009": [],
-  "1010": [],
-  "1011": [],
-  "1012": [],
-  "1022": [],
-  "1023": [],
-  "1024": [],
-  "1028": [],
-  "1030": [],
-  "1031": [],
-  "1038": [
-    "https://faucet.bronos.org"
-  ],
-  "1039": [],
-  "1073": [
-    "https://evm-toolkit.evm.testnet.shimmer.network",
-    "https://evm-faucet.testnet.shimmer.network"
-  ],
-  "1075": [
-    "https://evm-toolkit.evm.testnet.iotaledger.net"
-  ],
-  "1079": [],
-  "1080": [],
-  "1088": [],
-  "1089": [],
-  "1099": [],
-  "1100": [],
-  "1101": [],
-  "1107": [],
-  "1108": [],
-  "1111": [],
-  "1112": [
-    "https://wallet.test.wemix.com/faucet"
-  ],
-  "1113": [],
-  "1115": [
-    "https://scan.test.btcs.network/faucet"
-  ],
-  "1116": [],
-  "1117": [
-    "https://faucet.dogcoin.network"
-  ],
-  "1123": [],
-  "1130": [],
-  "1131": [],
-  "1133": [
-    "http://tc04.mydefichain.com/faucet"
-  ],
-  "1135": [],
-  "1138": [],
-  "1139": [],
-  "1140": [
-    "https://scan.boka.network/#/Galois/faucet"
-  ],
-  "1147": [
-    "https://faucet.flagscan.xyz"
-  ],
-  "1149": [],
-  "1170": [],
-  "1177": [],
-  "1188": [],
-  "1197": [],
-  "1200": [],
-  "1201": [],
-  "1202": [],
-  "1209": [],
-  "1210": [
-    "https://cuckoo.network/portal/faucet/"
-  ],
-  "1213": [],
-  "1214": [],
-  "1221": [],
-  "1225": [],
-  "1229": [],
-  "1230": [],
-  "1231": [],
-  "1234": [],
-  "1235": [],
-  "1243": [],
-  "1244": [
-    "https://faucet.archiechain.io"
-  ],
-  "1246": [],
-  "1248": [],
-  "1252": [
-    "https://cicfaucet.com"
-  ],
-  "1280": [],
-  "1284": [],
-  "1285": [],
-  "1287": [],
-  "1288": [],
-  "1291": [
-    "https://faucet.testnet.swisstronik.com"
-  ],
-  "1311": [],
-  "1314": [],
-  "1319": [],
-  "1320": [
-    "https://aia-faucet-testnet.aiachain.org"
-  ],
-  "1328": [
-    "https://atlantic-2.app.sei.io/faucet"
-  ],
-  "1329": [],
-  "1337": [],
-  "1338": [],
-  "1339": [],
-  "1343": [],
-  "1353": [],
-  "1369": [],
-  "1370": [],
-  "1377": [],
-  "1379": [],
-  "1388": [],
-  "1392": [],
-  "1414": [],
-  "1433": [],
-  "1440": [],
-  "1442": [],
-  "1452": [],
-  "1453": [
-    "https://istanbul-faucet.metachain.dev"
-  ],
-  "1455": [
-    "https://faucet.ctexscan.com"
-  ],
-  "1490": [],
-  "1499": [],
-  "1501": [],
-  "1506": [],
-  "1507": [],
-  "1515": [
-    "https://faucet.beagle.chat/"
-  ],
-  "1559": [],
-  "1617": [],
-  "1618": [],
-  "1620": [],
-  "1625": [],
-  "1657": [],
-  "1662": [],
-  "1663": [
-    "https://faucet.horizen.io"
-  ],
-  "1686": [],
-  "1687": [],
-  "1688": [],
-  "1701": [
-    "https://evm.anytype.io/faucet"
-  ],
-  "1707": [],
-  "1708": [
-    "https://faucet.blockchain.or.th"
-  ],
-  "1717": [],
-  "1718": [],
-  "1729": [],
-  "1740": [],
-  "1750": [],
-  "1773": [],
-  "1777": [],
-  "1789": [],
-  "1804": [
-    "https://github.com/ethereum-pocr/kerleano/blob/main/docs/faucet.md"
-  ],
-  "1807": [
-    "https://analogfaucet.com"
-  ],
-  "1818": [],
-  "1819": [
-    "https://faucet.cube.network"
-  ],
-  "1821": [],
-  "1856": [],
-  "1875": [],
-  "1881": [],
-  "1890": [],
-  "1891": [
-    "https://faucet.pegasus.lightlink.io/"
-  ],
-  "1898": [],
-  "1904": [],
-  "1907": [],
-  "1908": [
-    "https://faucet.bitcichain.com"
-  ],
-  "1909": [],
-  "1911": [],
-  "1912": [
-    "https://claim-faucet.rubychain.io/"
-  ],
-  "1918": [],
-  "1945": [],
-  "1951": [],
-  "1953": [],
-  "1954": [],
-  "1956": [],
-  "1961": [],
-  "1967": [
-    "https://faucet.metatime.com/eleanor"
-  ],
-  "1969": [
-    "https://testnet.scschain.com"
-  ],
-  "1970": [],
-  "1971": [],
-  "1972": [],
-  "1975": [],
-  "1984": [],
-  "1985": [],
-  "1986": [],
-  "1987": [],
-  "1992": [],
-  "1994": [],
-  "1995": [
-    "https://faucet.edexa.com/"
-  ],
-  "1996": [],
-  "1997": [],
-  "1998": [
-    "https://faucet.kyotoprotocol.io"
-  ],
-  "2000": [],
-  "2001": [],
-  "2002": [],
-  "2004": [],
-  "2008": [],
-  "2009": [],
-  "2013": [],
-  "2014": [],
-  "2016": [],
-  "2017": [
-    "https://telcoin.network/faucet"
-  ],
-  "2018": [],
-  "2019": [],
-  "2020": [],
-  "2021": [],
-  "2022": [],
-  "2023": [
-    "https://ttaycan-faucet.hupayx.io/"
-  ],
-  "2024": [],
-  "2025": [],
-  "2026": [],
-  "2031": [],
-  "2032": [],
-  "2035": [],
-  "2037": [],
-  "2038": [],
-  "2039": [],
-  "2040": [],
-  "2043": [],
-  "2044": [],
-  "2045": [],
-  "2047": [],
-  "2048": [],
-  "2049": [],
-  "2077": [],
-  "2088": [],
-  "2100": [],
-  "2101": [],
-  "2109": [],
-  "2112": [],
-  "2121": [],
-  "2122": [],
-  "2124": [],
-  "2136": [],
-  "2137": [],
-  "2138": [],
-  "2140": [],
-  "2141": [],
-  "2151": [],
-  "2152": [],
-  "2153": [],
-  "2154": [],
-  "2199": [
-    "https://multiverse.moonsama.com/faucet"
-  ],
-  "2202": [
-    "https://faucet.antofy.io"
-  ],
-  "2203": [],
-  "2213": [],
-  "2221": [
-    "https://faucet.kava.io"
-  ],
-  "2222": [],
-  "2223": [],
-  "2241": [],
-  "2300": [],
-  "2306": [],
-  "2309": [],
-  "2323": [
-    "https://faucet.somanetwork.io"
-  ],
-  "2330": [],
-  "2331": [],
-  "2332": [
-    "https://airdrop.somanetwork.io"
-  ],
-  "2340": [
-    "https://app-olympia.atleta.network/faucet"
-  ],
-  "2342": [
-    "https://www.omniaverse.io"
-  ],
-  "2355": [],
-  "2358": [],
-  "2370": [
-    "https://evm-faucet.nexis.network"
-  ],
-  "2399": [
-    "https://faucet.bombchain-testnet.ankr.com/"
-  ],
-  "2400": [],
-  "2410": [],
-  "2415": [],
-  "2425": [],
-  "2442": [],
-  "2458": [
-    "https://faucet-testnet.hybridchain.ai"
-  ],
-  "2468": [
-    "https://faucet-testnet.hybridchain.ai"
-  ],
-  "2484": [
-    "https://faucet.uniultra.xyz"
-  ],
-  "2522": [],
-  "2525": [],
-  "2559": [],
-  "2569": [],
-  "2606": [],
-  "2611": [],
-  "2612": [],
-  "2613": [
-    "https://testnet-faucet.ezchain.com"
-  ],
-  "2625": [
-    "https://testnet.whitechain.io/faucet"
-  ],
-  "2648": [],
-  "2649": [],
-  "2662": [],
-  "2710": [],
-  "2718": [],
-  "2730": [],
-  "2731": [],
-  "2748": [],
-  "2777": [],
-  "2810": [],
-  "2907": [],
-  "2911": [],
-  "2941": [
-    "https://xfaucet.xenonchain.com"
-  ],
-  "2999": [],
-  "3000": [
-    "https://app-faucet.centrality.me"
-  ],
-  "3001": [
-    "https://app-faucet.centrality.me"
-  ],
-  "3003": [],
-  "3011": [],
-  "3031": [],
-  "3033": [],
-  "3068": [],
-  "3073": [],
-  "3100": [],
-  "3102": [],
-  "3109": [],
-  "3110": [],
-  "3269": [],
-  "3270": [
-    "https://faucet.arabianchain.org/"
-  ],
-  "3306": [],
-  "3331": [
-    "https://faucet.zcore.cash"
-  ],
-  "3333": [],
-  "3334": [],
-  "3335": [],
-  "3400": [],
-  "3424": [],
-  "3434": [
-    "https://faucet.securechain.ai"
-  ],
-  "3456": [
-    "https://testnet-faucet.layeredge.io"
-  ],
-  "3490": [],
-  "3500": [
-    "https://faucet.paribuscan.com"
-  ],
-  "3501": [],
-  "3601": [],
-  "3602": [],
-  "3630": [],
-  "3636": [
-    "https://faucet.botanixlabs.dev"
-  ],
-  "3637": [
-    "https://faucet.btxtestchain.com"
-  ],
-  "3639": [],
-  "3645": [],
-  "3666": [],
-  "3690": [],
-  "3693": [],
-  "3698": [
-    "https://faucet.senjepowersscan.com"
-  ],
-  "3699": [
-    "https://faucet.senjepowersscan.com"
-  ],
-  "3737": [
-    "https://faucet.crossbell.io"
-  ],
-  "3776": [],
-  "3797": [],
-  "3799": [
-    "https://faucet.tangle.tools"
-  ],
-  "3885": [
-    "zkevm-faucet.thefirechain.com"
-  ],
-  "3888": [],
-  "3889": [],
-  "3912": [
-    "https://www.dracscan.io/faucet"
-  ],
-  "3939": [],
-  "3966": [
-    "https://faucet.dynoscan.io"
-  ],
-  "3967": [
-    "https://faucet.dynoscan.io"
-  ],
-  "3993": [
-    "https://sepoliafaucet.com/"
-  ],
-  "3999": [],
-  "4000": [],
-  "4001": [],
-  "4002": [
-    "https://faucet.fantom.network"
-  ],
-  "4003": [],
-  "4040": [
-    "https://getfaucet.carbonium.network"
-  ],
-  "4048": [],
-  "4058": [],
-  "4061": [],
-  "4062": [],
-  "4078": [],
-  "4080": [],
-  "4090": [
-    "https://faucet.oasis.fastexchain.com"
-  ],
-  "4096": [
-    "https://faucet.bitindi.org"
-  ],
-  "4099": [
-    "https://faucet.bitindi.org"
-  ],
-  "4102": [],
-  "4139": [],
-  "4141": [
-    "https://faucet.tipboxcoin.net"
-  ],
-  "4157": [],
-  "4181": [],
-  "4200": [],
-  "4201": [
-    "https://faucet.testnet.lukso.network"
-  ],
-  "4202": [
-    "https://app.optimism.io/faucet"
-  ],
-  "4242": [],
-  "4243": [],
-  "4337": [
-    "https://faucet.onbeam.com"
-  ],
-  "4400": [],
-  "4444": [
-    "https://gruvin.me/htmlcoin"
-  ],
-  "4460": [],
-  "4488": [],
-  "4544": [
-    "https://faucet.emoney.network/faucet"
-  ],
-  "4613": [],
-  "4653": [],
-  "4689": [],
-  "4690": [
-    "https://faucet.iotex.io/"
-  ],
-  "4759": [],
-  "4777": [],
-  "4893": [],
-  "4918": [],
-  "4919": [],
-  "4999": [],
-  "5000": [],
-  "5001": [
-    "https://faucet.testnet.mantle.xyz"
-  ],
-  "5002": [],
-  "5003": [
-    "https://faucet.sepolia.mantle.xyz"
-  ],
-  "5005": [],
-  "5039": [],
-  "5040": [],
-  "5051": [],
-  "5100": [],
-  "5101": [],
-  "5102": [],
-  "5103": [],
-  "5104": [],
-  "5105": [],
-  "5106": [],
-  "5112": [],
-  "5165": [],
-  "5169": [],
-  "5177": [],
-  "5197": [],
-  "5234": [],
-  "5315": [],
-  "5317": [],
-  "5321": [],
-  "5353": [
-    "https://faucet.tritanium.network"
-  ],
-  "5372": [
-    "https://faucet.settlus.io"
-  ],
-  "5424": [],
-  "5439": [],
-  "5522": [
-    "https://t.me/vexfaucetbot"
-  ],
-  "5551": [],
-  "5555": [],
-  "5611": [
-    "https://testnet.bnbchain.org/faucet-smart"
-  ],
-  "5615": [
-    "https://faucet.arcturuschain.io"
-  ],
-  "5616": [],
-  "5656": [],
-  "5675": [],
-  "5678": [],
-  "5700": [
-    "https://faucet.tanenbaum.io"
-  ],
-  "5729": [],
-  "5758": [
-    "https://faucet.satoshichain.io"
-  ],
-  "5777": [],
-  "5845": [],
-  "5851": [
-    "https://developer.ont.io/"
-  ],
-  "5869": [],
-  "6000": [],
-  "6001": [],
-  "6065": [
-    "http://faucet.tresleches.finance:8080"
-  ],
-  "6066": [],
-  "6102": [
-    "https://www.cascadia.foundation/faucet"
-  ],
-  "6118": [],
-  "6119": [],
-  "6321": [
-    "https://aura.faucetme.pro"
-  ],
-  "6322": [],
-  "6363": [],
-  "6502": [],
-  "6552": [
-    "https://faucet.scolcoin.com"
-  ],
-  "6565": [
-    "https://faucet.foxchain.app"
-  ],
-  "6626": [],
-  "6660": [
-    "http://faucet.latestchain.io"
-  ],
-  "6661": [],
-  "6666": [
-    "https://faucet.cybascan.io"
-  ],
-  "6688": [],
-  "6699": [],
-  "6701": [],
-  "6779": [],
-  "6789": [
-    "https://faucet.goldsmartchain.com"
-  ],
-  "6868": [],
-  "6969": [],
-  "6999": [],
-  "7000": [],
-  "7001": [
-    "https://labs.zetachain.com/get-zeta"
-  ],
-  "7007": [],
-  "7027": [],
-  "7070": [],
-  "7077": [],
-  "7100": [],
-  "7118": [],
-  "7171": [],
-  "7300": [],
-  "7331": [],
-  "7332": [],
-  "7341": [],
-  "7484": [],
-  "7518": [],
-  "7560": [],
-  "7575": [
-    "https://testnet-faucet.adil-scan.io"
-  ],
-  "7576": [],
-  "7668": [],
-  "7672": [],
-  "7700": [],
-  "7701": [],
-  "7771": [
-    "https://faucet.bit-rock.io"
-  ],
-  "7775": [],
-  "7777": [],
-  "7778": [],
-  "7798": [
-    "https://long.hub.openex.network/faucet"
-  ],
-  "7860": [
-    "https://faucet-testnet.maalscan.io/"
-  ],
-  "7878": [
-    "https://faucet.hazlor.com"
-  ],
-  "7887": [],
-  "7895": [
-    "https://faucet-athena.ardescan.com/"
-  ],
-  "7923": [],
-  "7924": [
-    "https://faucet.mochain.app/"
-  ],
-  "7979": [],
-  "8000": [],
-  "8001": [
-    "https://chain-docs.teleport.network/testnet/faucet.html"
-  ],
-  "8029": [],
-  "8047": [],
-  "8054": [],
-  "8080": [
-    "https://faucet.liberty10.shardeum.org"
-  ],
-  "8081": [
-    "https://faucet.liberty20.shardeum.org"
-  ],
-  "8082": [
-    "https://faucet-sphinx.shardeum.org/"
-  ],
-  "8086": [],
-  "8087": [],
-  "8098": [],
-  "8131": [
-    "https://faucet.qitmeer.io"
-  ],
-  "8132": [],
-  "8133": [],
-  "8134": [],
-  "8135": [],
-  "8136": [],
-  "8181": [
-    "https://testnet.beonescan.com/faucet"
-  ],
-  "8192": [],
-  "8194": [],
-  "8217": [],
-  "8227": [],
-  "8272": [
-    "https://faucet.blocktonscan.com/"
-  ],
-  "8285": [],
-  "8329": [],
-  "8387": [],
-  "8453": [],
-  "8654": [],
-  "8655": [],
-  "8668": [],
-  "8723": [],
-  "8724": [
-    "https://testnet-explorer.wolot.io"
-  ],
-  "8726": [],
-  "8727": [],
-  "8738": [],
-  "8768": [
-    "https://faucet.tmychain.org/"
-  ],
-  "8822": [],
-  "8844": [
-    "https://app.testnet.hydrachain.org/faucet"
-  ],
-  "8848": [],
-  "8866": [],
-  "8880": [],
-  "8881": [],
-  "8882": [
-    "https://t.me/unique2faucet_opal_bot"
-  ],
-  "8883": [],
-  "8888": [],
-  "8889": [],
-  "8890": [
-    "https://faucetcoin.orenium.org"
-  ],
-  "8898": [
-    "https://faucet.mmtscan.io/"
-  ],
-  "8899": [],
-  "8911": [],
-  "8912": [],
-  "8921": [],
-  "8922": [],
-  "8989": [],
-  "8995": [
-    "https://faucet.bloxberg.org/"
-  ],
-  "9000": [
-    "https://faucet.evmos.dev"
-  ],
-  "9001": [],
-  "9007": [
-    "https://testnet.shidoscan.com/faucet"
-  ],
-  "9008": [],
-  "9012": [
-    "https://t.me/BerylBit"
-  ],
-  "9024": [
-    "https://testnet.nexablockscan.io/faucet"
-  ],
-  "9025": [],
-  "9100": [],
-  "9223": [],
-  "9339": [
-    "https://faucet.dogcoin.network"
-  ],
-  "9393": [],
-  "9395": [],
-  "9527": [
-    "https://robin-faucet.rangersprotocol.com"
-  ],
-  "9528": [
-    "http://faucet.qeasyweb3.com"
-  ],
-  "9559": [
-    "https://faucet.neonlink.io/"
-  ],
-  "9700": [],
-  "9728": [],
-  "9768": [
-    "https://faucet.mainnetz.io"
-  ],
-  "9779": [],
-  "9789": [
-    "https://faucet.testnet.tabichain.com"
-  ],
-  "9790": [],
-  "9792": [],
-  "9797": [],
-  "9818": [
-    "https://faucet.imperiumchain.com/"
-  ],
-  "9819": [
-    "https://faucet.imperiumchain.com/"
-  ],
-  "9888": [],
-  "9898": [],
-  "9911": [],
-  "9977": [
-    "https://faucet.mindchain.info/"
-  ],
-  "9980": [],
-  "9981": [],
-  "9990": [],
-  "9996": [],
-  "9997": [],
-  "9998": [],
-  "9999": [],
-  "10000": [],
-  "10001": [],
-  "10024": [],
-  "10081": [],
-  "10086": [],
-  "10101": [],
-  "10200": [
-    "https://gnosisfaucet.com"
-  ],
-  "10201": [
-    "https://faucet.maxxchain.org"
-  ],
-  "10222": [],
-  "10242": [],
-  "10243": [
-    "https://faucet.arthera.net"
-  ],
-  "10248": [],
-  "10321": [],
-  "10324": [
-    "https://faucet.taoevm.io"
-  ],
-  "10395": [],
-  "10507": [],
-  "10508": [
-    "https://faucet.avax.network/?subnet=num",
-    "https://faucet.num.network"
-  ],
-  "10823": [],
-  "10849": [],
-  "10850": [],
-  "10946": [],
-  "10947": [
-    "https://faucetpage.quadrans.io"
-  ],
-  "11110": [],
-  "11111": [
-    "https://faucet.avax.network/?subnet=wagmi"
-  ],
-  "11115": [
-    "https://faucet.astranaut.dev"
-  ],
-  "11119": [],
-  "11221": [],
-  "11227": [],
-  "11235": [],
-  "11437": [],
-  "11501": [],
-  "11503": [],
-  "11612": [
-    "https://faucet.sardisnetwork.com"
-  ],
-  "11822": [],
-  "11891": [],
-  "12009": [],
-  "12020": [
-    "https://faucet.aternoschain.com"
-  ],
-  "12051": [
-    "https://nft.singularity.gold"
-  ],
-  "12052": [
-    "https://zeroscan.singularity.gold"
-  ],
-  "12123": [
-    "https://faucet.brcchain.io"
-  ],
-  "12306": [
-    "https://test.fibochain.org/faucets"
-  ],
-  "12321": [
-    "https://faucet.blgchain.com"
-  ],
-  "12324": [],
-  "12325": [],
-  "12345": [
-    "https://faucet.step.network"
-  ],
-  "12553": [],
-  "12715": [],
-  "12781": [],
-  "12890": [],
-  "12898": [],
-  "13000": [],
-  "13308": [],
-  "13337": [
-    "https://faucet.avax.network/?subnet=beam",
-    "https://faucet.onbeam.com"
-  ],
-  "13371": [
-    "https://docs.immutable.com/docs/zkEVM/guides/faucet"
-  ],
-  "13381": [],
-  "13396": [],
-  "13473": [
-    "https://docs.immutable.com/docs/zkEVM/guides/faucet"
-  ],
-  "13505": [],
-  "13600": [],
-  "13812": [],
-  "14000": [],
-  "14324": [
-    "https://faucet.evolveblockchain.io"
-  ],
-  "14333": [
-    "https://faucet.vitruveo.xyz"
-  ],
-  "14801": [
-    "https://faucet.vana.org"
-  ],
-  "14853": [
-    "https://t.me/HumanodeTestnet5FaucetBot"
-  ],
-  "15003": [
-    "https://docs.immutable.com/docs/zkEVM/guides/faucet"
-  ],
-  "15257": [
-    "https://faucet.poodl.org"
-  ],
-  "15259": [],
-  "15551": [],
-  "15555": [
-    "https://faucet.testnet-dev.trust.one/"
-  ],
-  "15557": [],
-  "16000": [],
-  "16001": [
-    "https://faucet.metadot.network/"
-  ],
-  "16116": [],
-  "16507": [],
-  "16688": [],
-  "16718": [],
-  "16888": [
-    "https://tfaucet.ivarex.com/"
-  ],
-  "17000": [
-    "https://faucet.holesky.ethpandaops.io",
-    "https://holesky-faucet.pk910.de"
-  ],
-  "17069": [],
-  "17117": [],
-  "17171": [
-    "https://faucet.oneg8.network"
-  ],
-  "17172": [],
-  "17180": [],
-  "17217": [],
-  "17777": [],
-  "18000": [],
-  "18122": [],
-  "18159": [],
-  "18181": [
-    "https://faucet.oneg8.network"
-  ],
-  "18233": [],
-  "18686": [],
-  "18888": [],
-  "18889": [],
-  "19011": [],
-  "19224": [],
-  "19527": [],
-  "19600": [],
-  "19845": [],
-  "20001": [],
-  "20041": [],
-  "20073": [],
-  "20729": [
-    "https://faucet.callisto.network/"
-  ],
-  "20736": [],
-  "20765": [],
-  "21004": [
-    "https://play.google.com/store/apps/details?id=net.c4ei.fps2"
-  ],
-  "21133": [
-    "https://t.me/c4eiAirdrop"
-  ],
-  "21223": [],
-  "21224": [
-    "https://faucet.dcpay.io"
-  ],
-  "21337": [],
-  "21816": [],
-  "21912": [],
-  "22023": [],
-  "22040": [],
-  "22222": [],
-  "22324": [
-    "https://faucet.goldxchain.io"
-  ],
-  "22776": [],
-  "23006": [
-    "https://faucet.antofy.io"
-  ],
-  "23118": [
-    "https://faucet.opside.network"
-  ],
-  "23294": [],
-  "23295": [],
-  "23451": [],
-  "23452": [],
-  "23888": [],
-  "24484": [],
-  "24734": [],
-  "25186": [],
-  "25839": [
-    "https://faucet.alveytestnet.com"
-  ],
-  "25888": [],
-  "25925": [
-    "https://faucet.bitkubchain.com"
-  ],
-  "26026": [
-    "https://testnet.faucet.ferrumnetwork.io"
-  ],
-  "26600": [],
-  "26863": [
-    "http://faucet.oasischain.io"
-  ],
-  "27181": [],
-  "27483": [],
-  "27827": [],
-  "28516": [],
-  "28518": [],
-  "28528": [],
-  "28882": [
-    "https://www.l2faucet.com/boba"
-  ],
-  "29112": [],
-  "29536": [
-    "https://faucet.kaichain.net"
-  ],
-  "29548": [],
-  "30067": [
-    "https://piecenetwork.com/faucet"
-  ],
-  "30088": [],
-  "30103": [],
-  "30730": [],
-  "30731": [],
-  "30732": [],
-  "31102": [],
-  "31223": [],
-  "31224": [
-    "https://faucet.cloudtx.finance"
-  ],
-  "31337": [],
-  "31414": [
-    "https://faucet.evokescan.org"
-  ],
-  "31753": [],
-  "31754": [
-    "https://xchainfaucet.net"
-  ],
-  "32001": [],
-  "32382": [],
-  "32520": [],
-  "32659": [],
-  "32769": [],
-  "32990": [
-    "https://dev-wallet.zilliqa.com/faucet?network=isolated_server"
-  ],
-  "33033": [],
-  "33101": [
-    "https://dev-wallet.zilliqa.com/faucet?network=testnet"
-  ],
-  "33133": [],
-  "33210": [],
-  "33333": [],
-  "33385": [
-    "https://faucet.devnet.zilliqa.com/"
-  ],
-  "33469": [
-    "https://faucet.zq2-devnet.zilliqa.com"
-  ],
-  "33979": [],
-  "34443": [],
-  "35011": [],
-  "35441": [],
-  "35443": [],
-  "38400": [],
-  "38401": [
-    "https://robin-faucet.rangersprotocol.com"
-  ],
-  "39656": [],
-  "39797": [],
-  "39815": [],
-  "41500": [],
-  "42069": [],
-  "42072": [],
-  "42161": [],
-  "42170": [],
-  "42220": [],
-  "42261": [
-    "https://faucet.testnet.oasis.io/"
-  ],
-  "42262": [],
-  "42355": [],
-  "42766": [],
-  "42793": [],
-  "42801": [],
-  "42888": [],
-  "43110": [
-    "http://athfaucet.ava.network//?address=${ADDRESS}"
-  ],
-  "43111": [],
-  "43113": [
-    "https://faucet.avax-test.network/"
-  ],
-  "43114": [],
-  "43851": [],
-  "44444": [],
-  "44445": [],
-  "44787": [
-    "https://celo.org/developers/faucet",
-    "https://cauldron.pretoriaresearchlab.io/alfajores-faucet"
-  ],
-  "45000": [],
-  "45454": [],
-  "45510": [
-    "https://faucet.deelance.com"
-  ],
-  "46688": [],
-  "47805": [],
-  "48795": [],
-  "48899": [],
-  "49049": [],
-  "49088": [],
-  "49321": [],
-  "49797": [],
-  "50001": [],
-  "50005": [],
-  "50006": [],
-  "50021": [],
-  "51178": [],
-  "51712": [
-    "https://faucet.sardisnetwork.com"
-  ],
-  "52014": [],
-  "53277": [],
-  "53302": [
-    "https://sepoliafaucet.com"
-  ],
-  "53457": [],
-  "53935": [],
-  "54211": [
-    "https://testedge2.haqq.network"
-  ],
-  "54321": [],
-  "54555": [
-    "https://photonchain.io/airdrop"
-  ],
-  "55004": [],
-  "55555": [
-    "http://kururu.finance/faucet?chainId=55555"
-  ],
-  "55556": [
-    "http://kururu.finance/faucet?chainId=55556"
-  ],
-  "56026": [],
-  "56288": [],
-  "56400": [],
-  "56789": [
-    "https://nova-faucet.velo.org"
-  ],
-  "56797": [],
-  "57000": [
-    "https://rollux.id/faucetapp"
-  ],
-  "57451": [],
-  "58008": [],
-  "59140": [
-    "https://faucetlink.to/goerli"
-  ],
-  "59141": [],
-  "59144": [],
-  "59971": [],
-  "60000": [
-    "https://www.thinkiumdev.net/faucet"
-  ],
-  "60001": [
-    "https://www.thinkiumdev.net/faucet"
-  ],
-  "60002": [
-    "https://www.thinkiumdev.net/faucet"
-  ],
-  "60103": [
-    "https://www.thinkiumdev.net/faucet"
-  ],
-  "60808": [],
-  "61406": [],
-  "61800": [],
-  "61803": [
-    "http://faucet.etica-stats.org/"
-  ],
-  "61916": [],
-  "62049": [],
-  "62050": [],
-  "62298": [
-    "https://citrea.xyz/bridge"
-  ],
-  "62320": [
-    "https://docs.google.com/forms/d/e/1FAIpQLSdfr1BwUTYepVmmvfVUDRCwALejZ-TUva2YujNpvrEmPAX2pg/viewform",
-    "https://cauldron.pretoriaresearchlab.io/baklava-faucet"
-  ],
-  "62621": [],
-  "62831": [
-    "https://faucet.avax.network/?subnet=plyr"
-  ],
-  "63000": [],
-  "63001": [
-    "https://faucet.tst.ecredits.com"
-  ],
-  "65450": [],
-  "66988": [],
-  "67588": [],
-  "68770": [],
-  "69420": [
-    "https://faucet.condrieu.ethdevops.io"
-  ],
-  "70000": [],
-  "70001": [],
-  "70002": [],
-  "70103": [],
-  "70700": [],
-  "71111": [],
-  "71393": [
-    "https://faucet.nervos.org/"
-  ],
-  "71401": [
-    "https://testnet.bridge.godwoken.io"
-  ],
-  "71402": [],
-  "72778": [],
-  "72992": [],
-  "73114": [],
-  "73115": [],
-  "73799": [
-    "https://voltafaucet.energyweb.org"
-  ],
-  "73927": [],
-  "75000": [],
-  "75512": [],
-  "75513": [],
-  "77001": [],
-  "77238": [
-    "https://faucet.foundryscan.org"
-  ],
-  "77612": [
-    "https://faucet.vention.network"
-  ],
-  "77777": [],
-  "78110": [],
-  "78281": [],
-  "78430": [],
-  "78431": [],
-  "78432": [],
-  "78600": [
-    "https://faucet.vanarchain.com"
-  ],
-  "79879": [
-    "https://faucet.goldsmartchain.com"
-  ],
-  "80001": [
-    "https://faucet.polygon.technology/"
-  ],
-  "80002": [
-    "https://faucet.polygon.technology/"
-  ],
-  "80084": [
-    "https://bartio.faucet.berachain.com"
-  ],
-  "80085": [
-    "https://artio.faucet.berachain.com"
-  ],
-  "80096": [],
-  "81041": [],
-  "81341": [],
-  "81342": [],
-  "81343": [],
-  "81351": [],
-  "81352": [],
-  "81353": [],
-  "81361": [],
-  "81362": [],
-  "81363": [],
-  "81457": [],
-  "81720": [],
-  "82459": [],
-  "83872": [],
-  "84531": [
-    "https://www.coinbase.com/faucets/base-ethereum-goerli-faucet"
-  ],
-  "84532": [],
-  "84886": [],
-  "85449": [],
-  "88002": [
-    "https://proteusfaucet.nautchain.xyz"
-  ],
-  "88559": [],
-  "88817": [],
-  "88819": [],
-  "88882": [
-    "https://spicy-faucet.chiliz.com",
-    "https://tatum.io/faucets/chiliz"
-  ],
-  "88888": [
-    "https://spicy-faucet.chiliz.com",
-    "https://tatum.io/faucets/chiliz"
-  ],
-  "90001": [],
-  "90210": [
-    "https://faucet.beverlyhills.ethdevops.io"
-  ],
-  "90354": [
-    "https://www.campnetwork.xyz/faucet"
-  ],
-  "91002": [
-    "https://faucet.eclipse.builders"
-  ],
-  "91120": [],
-  "91715": [],
-  "92001": [
-    "https://faucet.lambda.top"
-  ],
-  "93572": [
-    "https://claim.liquidlayer.network"
-  ],
-  "96970": [
-    "https://mantis.switch.ch/faucet",
-    "https://mantis.kore-technologies.ch/faucet",
-    "https://mantis.phoenix-systems.io/faucet",
-    "https://mantis.block-spirit.ch/faucet"
-  ],
-  "97531": [],
-  "97970": [
-    "https://faucet.optimusz7.com"
-  ],
-  "98881": [],
-  "99099": [
-    "https://faucet.eliberty.ngo"
-  ],
-  "99998": [],
-  "99999": [],
-  "100000": [],
-  "100001": [],
-  "100002": [],
-  "100003": [],
-  "100004": [],
-  "100005": [],
-  "100006": [],
-  "100007": [],
-  "100008": [],
-  "100009": [],
-  "100010": [
-    "https://faucet.vecha.in"
-  ],
-  "100011": [],
-  "101010": [],
-  "102031": [],
-  "103090": [],
-  "103454": [],
-  "104566": [],
-  "105105": [],
-  "108801": [],
-  "110000": [],
-  "110001": [],
-  "110002": [],
-  "110003": [],
-  "110004": [],
-  "110005": [],
-  "110006": [],
-  "110007": [],
-  "110008": [],
-  "110011": [],
-  "111000": [],
-  "111111": [],
-  "111188": [],
-  "112358": [],
-  "119139": [],
-  "123456": [],
-  "128123": [
-    "https://faucet.etherlink.com"
-  ],
-  "131313": [
-    "https://faucet.dioneprotocol.com/"
-  ],
-  "131419": [],
-  "132902": [
-    "https://info.form.network/faucet"
-  ],
-  "141319": [],
-  "142857": [],
-  "161212": [],
-  "165279": [],
-  "167000": [],
-  "167008": [],
-  "167009": [],
-  "188710": [],
-  "188881": [
-    "https://faucet.condor.systems"
-  ],
-  "192940": [],
-  "200000": [],
-  "200101": [],
-  "200202": [],
-  "200625": [],
-  "200810": [
-    "https://www.bitlayer.org/faucet"
-  ],
-  "200901": [],
-  "201018": [],
-  "201030": [
-    "https://faucet.alaya.network/faucet/?id=f93426c0887f11eb83b900163e06151c"
-  ],
-  "201804": [],
-  "202020": [],
-  "202212": [],
-  "202401": [],
-  "202624": [],
-  "204005": [],
-  "205205": [
-    "https://auroria.faucet.stratisevm.com"
-  ],
-  "210049": [],
-  "210425": [],
-  "220315": [],
-  "221230": [],
-  "221231": [
-    "http://faucet.reapchain.com"
-  ],
-  "222222": [],
-  "222555": [],
-  "222666": [
-    "https://faucet.deeplnetwork.org"
-  ],
-  "224168": [],
-  "224422": [],
-  "224433": [],
-  "230315": [
-    "https://testnet.hashkeychain/faucet"
-  ],
-  "234666": [],
-  "240515": [],
-  "246529": [],
-  "246785": [],
-  "247253": [],
-  "256256": [],
-  "262371": [
-    "https://faucet.eclatscan.com"
-  ],
-  "266256": [],
-  "271271": [
-    "https://faucet.egonscan.com"
-  ],
-  "281121": [],
-  "282828": [],
-  "309075": [],
-  "313313": [],
-  "314159": [
-    "https://faucet.calibration.fildev.network/"
-  ],
-  "322202": [],
-  "323213": [
-    "https://faucet.bloomgenesis.com"
-  ],
-  "330844": [
-    "https://faucet.tscscan.com"
-  ],
-  "333313": [],
-  "333331": [],
-  "333333": [],
-  "333666": [
-    "https://apps-test.adigium.com/faucet"
-  ],
-  "333777": [
-    "https://apps-test.adigium.com/faucet"
-  ],
-  "333888": [
-    "https://faucet.polis.tech"
-  ],
-  "333999": [
-    "https://faucet.polis.tech"
-  ],
-  "336655": [
-    "https://faucet-testnet.uniport.network"
-  ],
-  "336666": [],
-  "355110": [],
-  "355113": [
-    "https://bitfinity.network/faucet"
-  ],
-  "360890": [],
-  "363636": [],
-  "373737": [],
-  "381931": [],
-  "381932": [],
-  "404040": [
-    "https://faucet.tipboxcoin.net"
-  ],
-  "413413": [],
-  "420420": [],
-  "420666": [],
-  "420692": [],
-  "421611": [
-    "http://fauceth.komputing.org?chain=421611&address=${ADDRESS}"
-  ],
-  "421613": [],
-  "421614": [],
-  "424242": [],
-  "431140": [],
-  "432201": [
-    "https://faucet.avax.network/?subnet=dexalot"
-  ],
-  "432204": [],
-  "444444": [],
-  "444900": [
-    "https://faucet.weelink.gw002.oneitfarm.com"
-  ],
-  "471100": [],
-  "473861": [],
-  "474142": [],
-  "504441": [],
-  "512512": [
-    "https://dev.caduceus.foundation/testNetwork"
-  ],
-  "513100": [],
-  "526916": [],
-  "534351": [],
-  "534352": [],
-  "534849": [
-    "https://faucet.shinarium.org"
-  ],
-  "535037": [],
-  "552981": [
-    "https://faucet.oneworldchain.org"
-  ],
-  "555555": [
-    "https://bridge-testnet.pentagon.games"
-  ],
-  "555666": [],
-  "622277": [],
-  "622463": [],
-  "641230": [],
-  "651940": [],
-  "656476": [],
-  "660279": [],
-  "666666": [
-    "https://vpioneerfaucet.visionscan.org"
-  ],
-  "666888": [
-    "https://testnet-faucet.helachain.com"
-  ],
-  "686868": [
-    "https://faucet.wondollars.org"
-  ],
-  "696969": [
-    "https://docs.galadriel.com/faucet"
-  ],
-  "710420": [],
-  "713715": [
-    "https://sei-faucet.nima.enterprises",
-    "https://sei-evm.faucetme.pro"
-  ],
-  "721529": [],
-  "743111": [],
-  "751230": [
-    "https://faucet.bearnetwork.net"
-  ],
-  "761412": [],
-  "764984": [],
-  "767368": [],
-  "776877": [],
-  "800001": [],
-  "808080": [],
-  "810180": [],
-  "810181": [],
-  "810182": [],
-  "820522": [],
-  "827431": [],
-  "839320": [
-    "https://faucet.prmscan.org"
-  ],
-  "846000": [],
-  "855456": [],
-  "879151": [],
-  "888882": [],
-  "888888": [],
-  "900000": [],
-  "910000": [
-    "https://faucet.posichain.org/"
-  ],
-  "912559": [
-    "https://faucet.evm.dusk-3.devnet.astria.org/"
-  ],
-  "920000": [
-    "https://faucet.posichain.org/"
-  ],
-  "920001": [
-    "https://faucet.posichain.org/"
-  ],
-  "923018": [
-    "https://faucet-testnet.fncy.world"
-  ],
-  "955081": [],
-  "955305": [],
-  "978657": [
-    "https://portal.treasure.lol/faucet"
-  ],
-  "984122": [],
-  "984123": [],
-  "988207": [],
-  "998899": [
-    "https://faucet.chaingames.io"
-  ],
-  "999999": [],
-  "1100789": [],
-  "1127469": [],
-  "1261120": [],
-  "1313114": [],
-  "1313500": [],
-  "1337702": [
-    "http://fauceth.komputing.org?chain=1337702&address=${ADDRESS}",
-    "https://faucet.kintsugi.themerge.dev"
-  ],
-  "1337802": [
-    "https://faucet.kiln.themerge.dev",
-    "https://kiln-faucet.pk910.de",
-    "https://kilnfaucet.com"
-  ],
-  "1337803": [
-    "https://faucet.zhejiang.ethpandaops.io",
-    "https://zhejiang-faucet.pk910.de"
-  ],
-  "1398243": [],
-  "1612127": [],
-  "1637450": [],
-  "1731313": [],
-  "2021398": [],
-  "2099156": [],
-  "2206132": [
-    "https://devnet2faucet.platon.network/faucet"
-  ],
-  "2611555": [],
-  "3132023": [],
-  "3141592": [
-    "https://faucet.butterfly.fildev.network"
-  ],
-  "3397901": [],
-  "3441005": [],
-  "3441006": [],
-  "4000003": [],
-  "4281033": [],
-  "5112023": [],
-  "5167003": [],
-  "5167004": [],
-  "5201420": [],
-  "5318008": [
-    "https://dev.reactive.network/docs/kopli-testnet#faucet"
-  ],
-  "5555555": [],
-  "5555558": [],
-  "6038361": [],
-  "6666665": [],
-  "6666666": [],
-  "7225878": [],
-  "7355310": [],
-  "7668378": [
-    "https://faucet.qom.one"
-  ],
-  "7762959": [],
-  "7777777": [],
-  "8007736": [],
-  "8008135": [
-    "https://get-helium.fhenix.zone"
-  ],
-  "8080808": [],
-  "8601152": [
-    "https://faucet.testnet8.waterfall.network"
-  ],
-  "8794598": [],
-  "8888881": [],
-  "8888888": [],
-  "9322252": [],
-  "9322253": [],
-  "10067275": [],
-  "10101010": [
-    "https://faucet.soverun.com"
-  ],
-  "10241025": [],
-  "11155111": [
-    "http://fauceth.komputing.org?chain=11155111&address=${ADDRESS}"
-  ],
-  "11155420": [
-    "https://app.optimism.io/faucet"
-  ],
-  "13068200": [
-    "https://faucet.coti.io"
-  ],
-  "13371337": [],
-  "14288640": [],
-  "16658437": [],
-  "17000920": [],
-  "18289463": [],
-  "20180427": [],
-  "20180430": [],
-  "20181205": [],
-  "20201022": [],
-  "20240324": [],
-  "20241133": [],
-  "20482050": [],
-  "22052002": [],
-  "27082017": [
-    "https://faucet.exlscan.com"
-  ],
-  "27082022": [],
-  "28122024": [],
-  "28945486": [],
-  "29032022": [],
-  "31415926": [],
-  "35855456": [],
-  "37084624": [
-    "https://www.sfuelstation.com/"
-  ],
-  "39916801": [],
-  "43214913": [],
-  "61717561": [
-    "https://aquacha.in/faucet"
-  ],
-  "65010002": [
-    "https://faucet.autonity.org/"
-  ],
-  "65100002": [],
-  "68840142": [
-    "https://faucet.triangleplatform.com/frame/testnet"
-  ],
-  "77787778": [],
-  "88888888": [],
-  "94204209": [],
-  "99415706": [
-    "https://faucet.joys.digital/"
-  ],
-  "108160679": [],
-  "111557560": [],
-  "123420111": [],
-  "161221135": [],
-  "168587773": [
-    "https://faucet.quicknode.com/blast/sepolia"
-  ],
-  "192837465": [],
-  "222000222": [],
-  "245022926": [
-    "https://neonfaucet.org"
-  ],
-  "245022934": [],
-  "278611351": [
-    "https://faucet.razorscan.io/"
-  ],
-  "311752642": [],
-  "328527624": [],
-  "333000333": [],
-  "356256156": [],
-  "486217935": [],
-  "666666666": [],
-  "888888888": [],
-  "889910245": [
-    "https://faucet.ptcscan.io/"
-  ],
-  "889910246": [],
-  "974399131": [
-    "https://www.sfuelstation.com/"
-  ],
-  "999999999": [],
-  "1020352220": [
-    "https://www.sfuelstation.com/"
-  ],
-  "1122334455": [],
-  "1146703430": [],
-  "1273227453": [
-    "https://dashboard.humanprotocol.org/faucet"
-  ],
-  "1313161554": [],
-  "1313161555": [],
-  "1313161556": [],
-  "1313161560": [],
-  "1350216234": [
-    "https://sfuel.skale.network/"
-  ],
-  "1351057110": [
-    "https://sfuel.skale.network/staging/chaos"
-  ],
-  "1380012617": [],
-  "1380996178": [],
-  "1444673419": [
-    "https://www.sfuelstation.com/"
-  ],
-  "1482601649": [
-    "https://sfuel.skale.network/"
-  ],
-  "1564830818": [
-    "https://sfuel.dirtroad.dev"
-  ],
-  "1666600000": [],
-  "1666600001": [],
-  "1666700000": [
-    "https://faucet.pops.one"
-  ],
-  "1666700001": [
-    "https://faucet.pops.one"
-  ],
-  "1666900000": [],
-  "1666900001": [],
-  "1802203764": [],
-  "1918988905": [],
-  "2021121117": [],
-  "2046399126": [
-    "https://ruby.exchange/faucet.html",
-    "https://sfuel.mylilius.com/"
-  ],
-  "3125659152": [],
-  "4216137055": [
-    "https://frankenstein-faucet.oneledger.network"
-  ],
-  "11297108109": [],
-  "11297108099": [],
-  "28872323069": [],
-  "37714555429": [],
-  "88153591557": [],
-  "107107114116": [],
-  "111222333444": [],
-  "197710212030": [],
-  "197710212031": [],
-  "202402181627": [],
-  "383414847825": [
-    "https://faucet.zeniq.net/"
-  ],
-  "666301171999": [],
-  "6022140761023": [],
-  "2713017997578000": [],
-  "2716446429837000": []
-};
-
 export const NETWORK_CURRENCIES = {
   "1": {
     "name": "Ether",
@@ -17239,6 +14828,11 @@ export const NETWORK_CURRENCIES = {
   "345": {
     "name": "TAS",
     "symbol": "TAS",
+    "decimals": 18
+  },
+  "360": {
+    "name": "Ether",
+    "symbol": "ETH",
     "decimals": 18
   },
   "361": {
@@ -21521,6 +19115,11 @@ export const NETWORK_CURRENCIES = {
     "symbol": "ZIL",
     "decimals": 18
   },
+  "33103": {
+    "name": "Zilliqa",
+    "symbol": "ZIL",
+    "decimals": 18
+  },
   "33133": {
     "name": "Entangle",
     "symbol": "NGL",
@@ -23005,6 +20604,11 @@ export const NETWORK_CURRENCIES = {
     "name": "OpenCoin",
     "symbol": "OPC",
     "decimals": 10
+  },
+  "490000": {
+    "name": "Test Auto Coin",
+    "symbol": "TATC",
+    "decimals": 18
   },
   "504441": {
     "name": "Playdapp",
@@ -28349,6 +25953,9 @@ export const EXTRA_RPCS = {
   "33101": [
     "https://dev-api.zilliqa.com"
   ],
+  "33103": [
+    "https://api.zq2-prototestnet.zilliqa.com"
+  ],
   "33133": [
     "https://evm-testnet.entangle.fi"
   ],
@@ -29432,6 +27039,9 @@ export const EXTRA_RPCS = {
   "474142": [
     "https://baas-rpc.luniverse.io:18545?lChainId=1641349324562974539"
   ],
+  "490000": [
+    "https://nova-0.gemini-3h.subspace.network/ws"
+  ],
   "504441": [
     "https://subnets.avax.network/playdappne/mainnet/rpc"
   ],
@@ -30157,4 +27767,2441 @@ export const EXTRA_RPCS = {
   "2716446429837000": [
     "https://dchain-2716446429837000-1.jsonrpc.sagarpc.io"
   ]
+};
+
+export const NETWORK_FAUCETS = {
+  "1": [],
+  "2": [],
+  "3": [
+    "http://fauceth.komputing.org?chain=3&address=${ADDRESS}",
+    "https://faucet.ropsten.be?${ADDRESS}"
+  ],
+  "4": [
+    "http://fauceth.komputing.org?chain=4&address=${ADDRESS}",
+    "https://faucet.rinkeby.io"
+  ],
+  "5": [
+    "http://fauceth.komputing.org?chain=5&address=${ADDRESS}",
+    "https://goerli-faucet.slock.it?address=${ADDRESS}",
+    "https://faucet.goerli.mudit.blog"
+  ],
+  "7": [],
+  "8": [],
+  "9": [],
+  "10": [],
+  "11": [],
+  "12": [],
+  "13": [],
+  "14": [],
+  "15": [],
+  "16": [
+    "https://faucet.flare.network"
+  ],
+  "17": [],
+  "18": [
+    "https://faucet-testnet.thundercore.com"
+  ],
+  "19": [],
+  "20": [],
+  "21": [
+    "https://esc-faucet.elastos.io/"
+  ],
+  "22": [],
+  "23": [],
+  "24": [],
+  "25": [],
+  "26": [],
+  "27": [],
+  "29": [],
+  "30": [],
+  "31": [
+    "https://faucet.rsk.co/"
+  ],
+  "32": [],
+  "33": [],
+  "34": [],
+  "35": [],
+  "36": [],
+  "37": [],
+  "38": [],
+  "39": [],
+  "40": [],
+  "41": [
+    "https://app.telos.net/testnet/developers"
+  ],
+  "42": [],
+  "43": [
+    "https://docs.darwinia.network/pangolin-testnet-1e9ac8b09e874e8abd6a7f18c096ca6a"
+  ],
+  "44": [],
+  "45": [
+    "https://docs.darwinia.network/pangoro-testnet-70cfec5dc9ca42759959ba3803edaec2"
+  ],
+  "46": [],
+  "47": [],
+  "48": [],
+  "49": [],
+  "50": [],
+  "51": [
+    "https://faucet.apothem.network"
+  ],
+  "52": [],
+  "53": [],
+  "54": [],
+  "55": [],
+  "56": [],
+  "57": [
+    "https://faucet.syscoin.org"
+  ],
+  "58": [],
+  "60": [],
+  "61": [],
+  "63": [
+    "https://easy.hebeswap.com/#/faucet",
+    "https://faucet.mordortest.net"
+  ],
+  "64": [],
+  "65": [
+    "https://www.okex.com/drawdex"
+  ],
+  "66": [],
+  "67": [],
+  "68": [],
+  "69": [
+    "http://fauceth.komputing.org?chain=69&address=${ADDRESS}"
+  ],
+  "70": [],
+  "71": [
+    "https://faucet.confluxnetwork.org"
+  ],
+  "72": [
+    "https://faucet.dxscan.io"
+  ],
+  "73": [
+    "https://faucet-testnet.fncy.world"
+  ],
+  "74": [],
+  "75": [],
+  "76": [],
+  "77": [],
+  "78": [],
+  "79": [],
+  "80": [],
+  "81": [],
+  "82": [
+    "https://faucet.meter.io"
+  ],
+  "83": [
+    "https://faucet-warringstakes.meter.io"
+  ],
+  "84": [],
+  "85": [
+    "https://www.gatescan.org/testnet/faucet"
+  ],
+  "86": [
+    "https://www.gatescan.org/faucet"
+  ],
+  "87": [],
+  "88": [],
+  "89": [],
+  "90": [],
+  "91": [],
+  "92": [],
+  "93": [],
+  "94": [],
+  "95": [
+    "https://faucet.camdl.gov.kh/"
+  ],
+  "96": [],
+  "97": [
+    "https://testnet.bnbchain.org/faucet-smart"
+  ],
+  "98": [],
+  "99": [],
+  "100": [
+    "https://gnosisfaucet.com",
+    "https://stakely.io/faucet/gnosis-chain-xdai",
+    "https://faucet.prussia.dev/xdai"
+  ],
+  "101": [],
+  "102": [],
+  "103": [],
+  "104": [],
+  "105": [],
+  "106": [],
+  "107": [
+    "https://faucet.novanetwork.io"
+  ],
+  "108": [],
+  "109": [],
+  "110": [],
+  "111": [
+    "https://etherlite.org/faucets"
+  ],
+  "112": [],
+  "113": [
+    "https://buy.dehvo.com"
+  ],
+  "114": [
+    "https://faucet.flare.network"
+  ],
+  "117": [],
+  "118": [],
+  "119": [],
+  "120": [
+    "http://faucet.nuls.io"
+  ],
+  "121": [],
+  "122": [],
+  "123": [
+    "https://get.fusespark.io"
+  ],
+  "124": [],
+  "125": [
+    "https://faucet.oychain.io"
+  ],
+  "126": [],
+  "127": [],
+  "128": [],
+  "129": [],
+  "131": [],
+  "132": [],
+  "133": [],
+  "134": [],
+  "135": [
+    "https://faucet.alyxchain.com"
+  ],
+  "136": [],
+  "137": [],
+  "138": [],
+  "139": [],
+  "140": [],
+  "141": [],
+  "142": [],
+  "144": [],
+  "145": [],
+  "147": [],
+  "148": [],
+  "150": [
+    "https://faucet.sixprotocol.net"
+  ],
+  "151": [],
+  "152": [],
+  "153": [],
+  "154": [],
+  "155": [
+    "https://faucet.testnet.tenet.org"
+  ],
+  "156": [],
+  "157": [
+    "https://beta.shibariumtech.com/faucet"
+  ],
+  "158": [],
+  "159": [],
+  "160": [],
+  "161": [],
+  "162": [
+    "https://discuss.lightstreams.network/t/request-test-tokens"
+  ],
+  "163": [],
+  "164": [],
+  "166": [],
+  "167": [],
+  "168": [],
+  "169": [],
+  "170": [
+    "https://faucet-testnet.hscscan.com/"
+  ],
+  "172": [
+    "https://faucet.latam-blockchain.com"
+  ],
+  "176": [],
+  "180": [],
+  "181": [],
+  "185": [],
+  "186": [],
+  "188": [],
+  "189": [],
+  "191": [],
+  "193": [],
+  "195": [
+    "https://www.okx.com/xlayer/faucet"
+  ],
+  "196": [],
+  "197": [
+    "https://neutrinoschain.com/faucet"
+  ],
+  "198": [],
+  "199": [],
+  "200": [],
+  "201": [],
+  "202": [],
+  "204": [],
+  "206": [],
+  "207": [],
+  "208": [],
+  "210": [],
+  "211": [
+    "http://faucet.freight.sh"
+  ],
+  "212": [
+    "https://faucet.mapprotocol.io"
+  ],
+  "213": [],
+  "214": [],
+  "217": [],
+  "220": [
+    "https://faucet.scalind.com"
+  ],
+  "223": [],
+  "224": [
+    "https://faucet.vrd.network"
+  ],
+  "225": [],
+  "226": [],
+  "228": [],
+  "230": [],
+  "234": [
+    "https://protojumbo.jumbochain.org/faucet-smart"
+  ],
+  "236": [
+    "https://faucet.deamchain.com"
+  ],
+  "242": [],
+  "246": [],
+  "248": [],
+  "250": [],
+  "252": [],
+  "255": [],
+  "256": [
+    "https://scan-testnet.hecochain.com/faucet"
+  ],
+  "258": [],
+  "259": [],
+  "262": [],
+  "266": [],
+  "267": [
+    "https://testnet.neuraprotocol.io/faucet"
+  ],
+  "268": [],
+  "269": [
+    "https://myhpbwallet.com/"
+  ],
+  "271": [],
+  "274": [],
+  "278": [],
+  "279": [],
+  "282": [
+    "https://zkevm.cronos.org/faucet"
+  ],
+  "288": [],
+  "291": [],
+  "295": [],
+  "296": [
+    "https://portal.hedera.com"
+  ],
+  "297": [
+    "https://portal.hedera.com"
+  ],
+  "298": [],
+  "300": [],
+  "302": [],
+  "303": [],
+  "305": [],
+  "307": [
+    "https://faucet.lovely.network"
+  ],
+  "308": [],
+  "309": [],
+  "311": [
+    "https://faucet.omaxray.com/"
+  ],
+  "313": [],
+  "314": [],
+  "321": [],
+  "322": [
+    "https://faucet-testnet.kcc.network"
+  ],
+  "323": [],
+  "324": [],
+  "333": [],
+  "335": [],
+  "336": [],
+  "338": [
+    "https://cronos.org/faucet"
+  ],
+  "345": [],
+  "360": [],
+  "361": [],
+  "363": [],
+  "364": [],
+  "365": [],
+  "369": [],
+  "371": [],
+  "380": [],
+  "381": [],
+  "385": [
+    "https://pipa.lisinski.online"
+  ],
+  "395": [
+    "https://faucet.testnet.camdl.gov.kh/"
+  ],
+  "397": [],
+  "398": [],
+  "399": [],
+  "400": [
+    "https://faucet.hyperonchain.com"
+  ],
+  "401": [],
+  "404": [],
+  "411": [],
+  "416": [],
+  "418": [
+    "https://faucet.lachain.network"
+  ],
+  "420": [],
+  "422": [],
+  "424": [],
+  "427": [],
+  "428": [],
+  "434": [],
+  "443": [],
+  "444": [],
+  "456": [],
+  "462": [],
+  "463": [],
+  "499": [],
+  "500": [],
+  "501": [],
+  "510": [],
+  "512": [],
+  "513": [
+    "https://scan-testnet.acuteangle.com/faucet"
+  ],
+  "516": [],
+  "520": [
+    "https://xsc.pub/faucet"
+  ],
+  "529": [],
+  "530": [],
+  "534": [],
+  "537": [],
+  "542": [],
+  "545": [
+    "https://testnet-faucet.onflow.org"
+  ],
+  "555": [],
+  "558": [],
+  "568": [
+    "https://faucet.dogechain.dog"
+  ],
+  "570": [
+    "https://rollux.id/faucetapp"
+  ],
+  "571": [],
+  "579": [],
+  "592": [],
+  "595": [],
+  "596": [],
+  "597": [],
+  "600": [],
+  "601": [
+    "https://vne.network/rose"
+  ],
+  "612": [],
+  "614": [],
+  "634": [],
+  "646": [
+    "https://previewnet-faucet.onflow.org"
+  ],
+  "647": [
+    "https://faucet.toronto.sx.technology"
+  ],
+  "648": [],
+  "653": [],
+  "654": [],
+  "662": [],
+  "666": [
+    "https://chain.pixie.xyz/faucet"
+  ],
+  "667": [],
+  "668": [],
+  "669": [
+    "https://faucet-testnet.juncachain.com"
+  ],
+  "686": [],
+  "690": [],
+  "700": [],
+  "701": [],
+  "707": [],
+  "708": [
+    "https://faucet.bcsdev.io"
+  ],
+  "710": [],
+  "713": [],
+  "719": [],
+  "721": [],
+  "727": [],
+  "730": [],
+  "741": [
+    "https://faucet.vention.network"
+  ],
+  "742": [],
+  "747": [],
+  "766": [],
+  "776": [
+    "https://faucet.openchain.info/"
+  ],
+  "777": [],
+  "786": [],
+  "787": [],
+  "788": [
+    "https://faucet.aerochain.id/"
+  ],
+  "789": [],
+  "799": [
+    "https://faucet.testnet.rupaya.io"
+  ],
+  "800": [
+    "https://faucet.lucidcoin.io"
+  ],
+  "803": [],
+  "808": [],
+  "810": [
+    "https://www.haven1.org/faucet"
+  ],
+  "813": [],
+  "814": [],
+  "818": [],
+  "820": [],
+  "822": [
+    "https://faucet.runic.build"
+  ],
+  "831": [],
+  "841": [],
+  "842": [],
+  "859": [],
+  "868": [],
+  "876": [],
+  "877": [
+    "https://faucet.dexit.network"
+  ],
+  "880": [],
+  "888": [],
+  "898": [
+    "https://faucet.maxi.network"
+  ],
+  "899": [],
+  "900": [
+    "https://faucet-testnet.garizon.com"
+  ],
+  "901": [
+    "https://faucet-testnet.garizon.com"
+  ],
+  "902": [
+    "https://faucet-testnet.garizon.com"
+  ],
+  "903": [
+    "https://faucet-testnet.garizon.com"
+  ],
+  "909": [],
+  "910": [],
+  "911": [],
+  "917": [
+    "https://faucet.thefirechain.com"
+  ],
+  "919": [
+    "https://sepoliafaucet.com/"
+  ],
+  "927": [],
+  "943": [
+    "https://faucet.v4.testnet.pulsechain.com/"
+  ],
+  "956": [],
+  "957": [],
+  "963": [],
+  "969": [],
+  "970": [],
+  "971": [],
+  "972": [],
+  "977": [
+    "https://faucet.nepalblockchain.network"
+  ],
+  "979": [],
+  "980": [],
+  "985": [
+    "https://faucet.metamemo.one/"
+  ],
+  "989": [],
+  "990": [
+    "https://faucet.eliberty.ngo"
+  ],
+  "997": [
+    "https://explorer.5ire.network/faucet"
+  ],
+  "998": [],
+  "999": [],
+  "1000": [],
+  "1001": [
+    "https://baobab.wallet.klaytn.com/access?next=faucet"
+  ],
+  "1003": [],
+  "1004": [],
+  "1007": [],
+  "1008": [],
+  "1009": [],
+  "1010": [],
+  "1011": [],
+  "1012": [],
+  "1022": [],
+  "1023": [],
+  "1024": [],
+  "1028": [],
+  "1030": [],
+  "1031": [],
+  "1038": [
+    "https://faucet.bronos.org"
+  ],
+  "1039": [],
+  "1073": [
+    "https://evm-toolkit.evm.testnet.shimmer.network",
+    "https://evm-faucet.testnet.shimmer.network"
+  ],
+  "1075": [
+    "https://evm-toolkit.evm.testnet.iotaledger.net"
+  ],
+  "1079": [],
+  "1080": [],
+  "1088": [],
+  "1089": [],
+  "1099": [],
+  "1100": [],
+  "1101": [],
+  "1107": [],
+  "1108": [],
+  "1111": [],
+  "1112": [
+    "https://wallet.test.wemix.com/faucet"
+  ],
+  "1113": [],
+  "1115": [
+    "https://scan.test.btcs.network/faucet"
+  ],
+  "1116": [],
+  "1117": [
+    "https://faucet.dogcoin.network"
+  ],
+  "1123": [],
+  "1130": [],
+  "1131": [],
+  "1133": [
+    "http://tc04.mydefichain.com/faucet"
+  ],
+  "1135": [],
+  "1138": [],
+  "1139": [],
+  "1140": [
+    "https://scan.boka.network/#/Galois/faucet"
+  ],
+  "1147": [
+    "https://faucet.flagscan.xyz"
+  ],
+  "1149": [],
+  "1170": [],
+  "1177": [],
+  "1188": [],
+  "1197": [],
+  "1200": [],
+  "1201": [],
+  "1202": [],
+  "1209": [],
+  "1210": [
+    "https://cuckoo.network/portal/faucet/"
+  ],
+  "1213": [],
+  "1214": [],
+  "1221": [],
+  "1225": [],
+  "1229": [],
+  "1230": [],
+  "1231": [],
+  "1234": [],
+  "1235": [],
+  "1243": [],
+  "1244": [
+    "https://faucet.archiechain.io"
+  ],
+  "1246": [],
+  "1248": [],
+  "1252": [
+    "https://cicfaucet.com"
+  ],
+  "1280": [],
+  "1284": [],
+  "1285": [],
+  "1287": [],
+  "1288": [],
+  "1291": [
+    "https://faucet.testnet.swisstronik.com"
+  ],
+  "1311": [],
+  "1314": [],
+  "1319": [],
+  "1320": [
+    "https://aia-faucet-testnet.aiachain.org"
+  ],
+  "1328": [
+    "https://atlantic-2.app.sei.io/faucet"
+  ],
+  "1329": [],
+  "1337": [],
+  "1338": [],
+  "1339": [],
+  "1343": [],
+  "1353": [],
+  "1369": [],
+  "1370": [],
+  "1377": [],
+  "1379": [],
+  "1388": [],
+  "1392": [],
+  "1414": [],
+  "1433": [],
+  "1440": [],
+  "1442": [],
+  "1452": [],
+  "1453": [
+    "https://istanbul-faucet.metachain.dev"
+  ],
+  "1455": [
+    "https://faucet.ctexscan.com"
+  ],
+  "1490": [],
+  "1499": [],
+  "1501": [],
+  "1506": [],
+  "1507": [],
+  "1515": [
+    "https://faucet.beagle.chat/"
+  ],
+  "1559": [],
+  "1617": [],
+  "1618": [],
+  "1620": [],
+  "1625": [],
+  "1657": [],
+  "1662": [],
+  "1663": [
+    "https://faucet.horizen.io"
+  ],
+  "1686": [],
+  "1687": [],
+  "1688": [],
+  "1701": [
+    "https://evm.anytype.io/faucet"
+  ],
+  "1707": [],
+  "1708": [
+    "https://faucet.blockchain.or.th"
+  ],
+  "1717": [],
+  "1718": [],
+  "1729": [],
+  "1740": [],
+  "1750": [],
+  "1773": [],
+  "1777": [],
+  "1789": [],
+  "1804": [
+    "https://github.com/ethereum-pocr/kerleano/blob/main/docs/faucet.md"
+  ],
+  "1807": [
+    "https://analogfaucet.com"
+  ],
+  "1818": [],
+  "1819": [
+    "https://faucet.cube.network"
+  ],
+  "1821": [],
+  "1856": [],
+  "1875": [],
+  "1881": [],
+  "1890": [],
+  "1891": [
+    "https://faucet.pegasus.lightlink.io/"
+  ],
+  "1898": [],
+  "1904": [],
+  "1907": [],
+  "1908": [
+    "https://faucet.bitcichain.com"
+  ],
+  "1909": [],
+  "1911": [],
+  "1912": [
+    "https://claim-faucet.rubychain.io/"
+  ],
+  "1918": [],
+  "1945": [],
+  "1951": [],
+  "1953": [],
+  "1954": [],
+  "1956": [],
+  "1961": [],
+  "1967": [
+    "https://faucet.metatime.com/eleanor"
+  ],
+  "1969": [
+    "https://testnet.scschain.com"
+  ],
+  "1970": [],
+  "1971": [],
+  "1972": [],
+  "1975": [],
+  "1984": [],
+  "1985": [],
+  "1986": [],
+  "1987": [],
+  "1992": [],
+  "1994": [],
+  "1995": [
+    "https://faucet.edexa.com/"
+  ],
+  "1996": [],
+  "1997": [],
+  "1998": [
+    "https://faucet.kyotoprotocol.io"
+  ],
+  "2000": [],
+  "2001": [],
+  "2002": [],
+  "2004": [],
+  "2008": [],
+  "2009": [],
+  "2013": [],
+  "2014": [],
+  "2016": [],
+  "2017": [
+    "https://telcoin.network/faucet"
+  ],
+  "2018": [],
+  "2019": [],
+  "2020": [],
+  "2021": [],
+  "2022": [],
+  "2023": [
+    "https://ttaycan-faucet.hupayx.io/"
+  ],
+  "2024": [],
+  "2025": [],
+  "2026": [],
+  "2031": [],
+  "2032": [],
+  "2035": [],
+  "2037": [],
+  "2038": [],
+  "2039": [],
+  "2040": [],
+  "2043": [],
+  "2044": [],
+  "2045": [],
+  "2047": [],
+  "2048": [],
+  "2049": [],
+  "2077": [],
+  "2088": [],
+  "2100": [],
+  "2101": [],
+  "2109": [],
+  "2112": [],
+  "2121": [],
+  "2122": [],
+  "2124": [],
+  "2136": [],
+  "2137": [],
+  "2138": [],
+  "2140": [],
+  "2141": [],
+  "2151": [],
+  "2152": [],
+  "2153": [],
+  "2154": [],
+  "2199": [
+    "https://multiverse.moonsama.com/faucet"
+  ],
+  "2202": [
+    "https://faucet.antofy.io"
+  ],
+  "2203": [],
+  "2213": [],
+  "2221": [
+    "https://faucet.kava.io"
+  ],
+  "2222": [],
+  "2223": [],
+  "2241": [],
+  "2300": [],
+  "2306": [],
+  "2309": [],
+  "2323": [
+    "https://faucet.somanetwork.io"
+  ],
+  "2330": [],
+  "2331": [],
+  "2332": [
+    "https://airdrop.somanetwork.io"
+  ],
+  "2340": [
+    "https://app-olympia.atleta.network/faucet"
+  ],
+  "2342": [
+    "https://www.omniaverse.io"
+  ],
+  "2355": [],
+  "2358": [],
+  "2370": [
+    "https://evm-faucet.nexis.network"
+  ],
+  "2399": [
+    "https://faucet.bombchain-testnet.ankr.com/"
+  ],
+  "2400": [],
+  "2410": [],
+  "2415": [],
+  "2425": [],
+  "2442": [],
+  "2458": [
+    "https://faucet-testnet.hybridchain.ai"
+  ],
+  "2468": [
+    "https://faucet-testnet.hybridchain.ai"
+  ],
+  "2484": [
+    "https://faucet.uniultra.xyz"
+  ],
+  "2522": [],
+  "2525": [],
+  "2559": [],
+  "2569": [],
+  "2606": [],
+  "2611": [],
+  "2612": [],
+  "2613": [
+    "https://testnet-faucet.ezchain.com"
+  ],
+  "2625": [
+    "https://testnet.whitechain.io/faucet"
+  ],
+  "2648": [],
+  "2649": [],
+  "2662": [],
+  "2710": [],
+  "2718": [],
+  "2730": [],
+  "2731": [],
+  "2748": [],
+  "2777": [],
+  "2810": [],
+  "2907": [],
+  "2911": [],
+  "2941": [
+    "https://xfaucet.xenonchain.com"
+  ],
+  "2999": [],
+  "3000": [
+    "https://app-faucet.centrality.me"
+  ],
+  "3001": [
+    "https://app-faucet.centrality.me"
+  ],
+  "3003": [],
+  "3011": [],
+  "3031": [],
+  "3033": [],
+  "3068": [],
+  "3073": [],
+  "3100": [],
+  "3102": [],
+  "3109": [],
+  "3110": [],
+  "3269": [],
+  "3270": [
+    "https://faucet.arabianchain.org/"
+  ],
+  "3306": [],
+  "3331": [
+    "https://faucet.zcore.cash"
+  ],
+  "3333": [],
+  "3334": [],
+  "3335": [],
+  "3400": [],
+  "3424": [],
+  "3434": [
+    "https://faucet.securechain.ai"
+  ],
+  "3456": [
+    "https://testnet-faucet.layeredge.io"
+  ],
+  "3490": [],
+  "3500": [
+    "https://faucet.paribuscan.com"
+  ],
+  "3501": [],
+  "3601": [],
+  "3602": [],
+  "3630": [],
+  "3636": [
+    "https://faucet.botanixlabs.dev"
+  ],
+  "3637": [
+    "https://faucet.btxtestchain.com"
+  ],
+  "3639": [],
+  "3645": [],
+  "3666": [],
+  "3690": [],
+  "3693": [],
+  "3698": [
+    "https://faucet.senjepowersscan.com"
+  ],
+  "3699": [
+    "https://faucet.senjepowersscan.com"
+  ],
+  "3737": [
+    "https://faucet.crossbell.io"
+  ],
+  "3776": [],
+  "3797": [],
+  "3799": [
+    "https://faucet.tangle.tools"
+  ],
+  "3885": [
+    "zkevm-faucet.thefirechain.com"
+  ],
+  "3888": [],
+  "3889": [],
+  "3912": [
+    "https://www.dracscan.io/faucet"
+  ],
+  "3939": [],
+  "3966": [
+    "https://faucet.dynoscan.io"
+  ],
+  "3967": [
+    "https://faucet.dynoscan.io"
+  ],
+  "3993": [
+    "https://sepoliafaucet.com/"
+  ],
+  "3999": [],
+  "4000": [],
+  "4001": [],
+  "4002": [
+    "https://faucet.fantom.network"
+  ],
+  "4003": [],
+  "4040": [
+    "https://getfaucet.carbonium.network"
+  ],
+  "4048": [],
+  "4058": [],
+  "4061": [],
+  "4062": [],
+  "4078": [],
+  "4080": [],
+  "4090": [
+    "https://faucet.oasis.fastexchain.com"
+  ],
+  "4096": [
+    "https://faucet.bitindi.org"
+  ],
+  "4099": [
+    "https://faucet.bitindi.org"
+  ],
+  "4102": [],
+  "4139": [],
+  "4141": [
+    "https://faucet.tipboxcoin.net"
+  ],
+  "4157": [],
+  "4181": [],
+  "4200": [],
+  "4201": [
+    "https://faucet.testnet.lukso.network"
+  ],
+  "4202": [
+    "https://app.optimism.io/faucet"
+  ],
+  "4242": [],
+  "4243": [],
+  "4337": [
+    "https://faucet.onbeam.com"
+  ],
+  "4400": [],
+  "4444": [
+    "https://gruvin.me/htmlcoin"
+  ],
+  "4460": [],
+  "4488": [],
+  "4544": [
+    "https://faucet.emoney.network/faucet"
+  ],
+  "4613": [],
+  "4653": [],
+  "4689": [],
+  "4690": [
+    "https://faucet.iotex.io/"
+  ],
+  "4759": [],
+  "4777": [],
+  "4893": [],
+  "4918": [],
+  "4919": [],
+  "4999": [],
+  "5000": [],
+  "5001": [
+    "https://faucet.testnet.mantle.xyz"
+  ],
+  "5002": [],
+  "5003": [
+    "https://faucet.sepolia.mantle.xyz"
+  ],
+  "5005": [],
+  "5039": [],
+  "5040": [],
+  "5051": [],
+  "5100": [],
+  "5101": [],
+  "5102": [],
+  "5103": [],
+  "5104": [],
+  "5105": [],
+  "5106": [],
+  "5112": [],
+  "5165": [],
+  "5169": [],
+  "5177": [],
+  "5197": [],
+  "5234": [],
+  "5315": [],
+  "5317": [],
+  "5321": [],
+  "5353": [
+    "https://faucet.tritanium.network"
+  ],
+  "5372": [
+    "https://faucet.settlus.io"
+  ],
+  "5424": [],
+  "5439": [],
+  "5522": [
+    "https://t.me/vexfaucetbot"
+  ],
+  "5551": [],
+  "5555": [],
+  "5611": [
+    "https://testnet.bnbchain.org/faucet-smart"
+  ],
+  "5615": [
+    "https://faucet.arcturuschain.io"
+  ],
+  "5616": [],
+  "5656": [],
+  "5675": [],
+  "5678": [],
+  "5700": [
+    "https://faucet.tanenbaum.io"
+  ],
+  "5729": [],
+  "5758": [
+    "https://faucet.satoshichain.io"
+  ],
+  "5777": [],
+  "5845": [],
+  "5851": [
+    "https://developer.ont.io/"
+  ],
+  "5869": [],
+  "6000": [],
+  "6001": [],
+  "6065": [
+    "http://faucet.tresleches.finance:8080"
+  ],
+  "6066": [],
+  "6102": [
+    "https://www.cascadia.foundation/faucet"
+  ],
+  "6118": [],
+  "6119": [],
+  "6321": [
+    "https://aura.faucetme.pro"
+  ],
+  "6322": [],
+  "6363": [],
+  "6502": [],
+  "6552": [
+    "https://faucet.scolcoin.com"
+  ],
+  "6565": [
+    "https://faucet.foxchain.app"
+  ],
+  "6626": [],
+  "6660": [
+    "http://faucet.latestchain.io"
+  ],
+  "6661": [],
+  "6666": [
+    "https://faucet.cybascan.io"
+  ],
+  "6688": [],
+  "6699": [],
+  "6701": [],
+  "6779": [],
+  "6789": [
+    "https://faucet.goldsmartchain.com"
+  ],
+  "6868": [],
+  "6969": [],
+  "6999": [],
+  "7000": [],
+  "7001": [
+    "https://labs.zetachain.com/get-zeta"
+  ],
+  "7007": [],
+  "7027": [],
+  "7070": [],
+  "7077": [],
+  "7100": [],
+  "7118": [],
+  "7171": [],
+  "7300": [],
+  "7331": [],
+  "7332": [],
+  "7341": [],
+  "7484": [],
+  "7518": [],
+  "7560": [],
+  "7575": [
+    "https://testnet-faucet.adil-scan.io"
+  ],
+  "7576": [],
+  "7668": [],
+  "7672": [],
+  "7700": [],
+  "7701": [],
+  "7771": [
+    "https://faucet.bit-rock.io"
+  ],
+  "7775": [],
+  "7777": [],
+  "7778": [],
+  "7798": [
+    "https://long.hub.openex.network/faucet"
+  ],
+  "7860": [
+    "https://faucet-testnet.maalscan.io/"
+  ],
+  "7878": [
+    "https://faucet.hazlor.com"
+  ],
+  "7887": [],
+  "7895": [
+    "https://faucet-athena.ardescan.com/"
+  ],
+  "7923": [],
+  "7924": [
+    "https://faucet.mochain.app/"
+  ],
+  "7979": [],
+  "8000": [],
+  "8001": [
+    "https://chain-docs.teleport.network/testnet/faucet.html"
+  ],
+  "8029": [],
+  "8047": [],
+  "8054": [],
+  "8080": [
+    "https://faucet.liberty10.shardeum.org"
+  ],
+  "8081": [
+    "https://faucet.liberty20.shardeum.org"
+  ],
+  "8082": [
+    "https://faucet-sphinx.shardeum.org/"
+  ],
+  "8086": [],
+  "8087": [],
+  "8098": [],
+  "8131": [
+    "https://faucet.qitmeer.io"
+  ],
+  "8132": [],
+  "8133": [],
+  "8134": [],
+  "8135": [],
+  "8136": [],
+  "8181": [
+    "https://testnet.beonescan.com/faucet"
+  ],
+  "8192": [],
+  "8194": [],
+  "8217": [],
+  "8227": [],
+  "8272": [
+    "https://faucet.blocktonscan.com/"
+  ],
+  "8285": [],
+  "8329": [],
+  "8387": [],
+  "8453": [],
+  "8654": [],
+  "8655": [],
+  "8668": [],
+  "8723": [],
+  "8724": [
+    "https://testnet-explorer.wolot.io"
+  ],
+  "8726": [],
+  "8727": [],
+  "8738": [],
+  "8768": [
+    "https://faucet.tmychain.org/"
+  ],
+  "8822": [],
+  "8844": [
+    "https://app.testnet.hydrachain.org/faucet"
+  ],
+  "8848": [],
+  "8866": [],
+  "8880": [],
+  "8881": [],
+  "8882": [
+    "https://t.me/unique2faucet_opal_bot"
+  ],
+  "8883": [],
+  "8888": [],
+  "8889": [],
+  "8890": [
+    "https://faucetcoin.orenium.org"
+  ],
+  "8898": [
+    "https://faucet.mmtscan.io/"
+  ],
+  "8899": [],
+  "8911": [],
+  "8912": [],
+  "8921": [],
+  "8922": [],
+  "8989": [],
+  "8995": [
+    "https://faucet.bloxberg.org/"
+  ],
+  "9000": [
+    "https://faucet.evmos.dev"
+  ],
+  "9001": [],
+  "9007": [
+    "https://testnet.shidoscan.com/faucet"
+  ],
+  "9008": [],
+  "9012": [
+    "https://t.me/BerylBit"
+  ],
+  "9024": [
+    "https://testnet.nexablockscan.io/faucet"
+  ],
+  "9025": [],
+  "9100": [],
+  "9223": [],
+  "9339": [
+    "https://faucet.dogcoin.network"
+  ],
+  "9393": [],
+  "9395": [],
+  "9527": [
+    "https://robin-faucet.rangersprotocol.com"
+  ],
+  "9528": [
+    "http://faucet.qeasyweb3.com"
+  ],
+  "9559": [
+    "https://faucet.neonlink.io/"
+  ],
+  "9700": [],
+  "9728": [],
+  "9768": [
+    "https://faucet.mainnetz.io"
+  ],
+  "9779": [],
+  "9789": [
+    "https://faucet.testnet.tabichain.com"
+  ],
+  "9790": [],
+  "9792": [],
+  "9797": [],
+  "9818": [
+    "https://faucet.imperiumchain.com/"
+  ],
+  "9819": [
+    "https://faucet.imperiumchain.com/"
+  ],
+  "9888": [],
+  "9898": [],
+  "9911": [],
+  "9977": [
+    "https://faucet.mindchain.info/"
+  ],
+  "9980": [],
+  "9981": [],
+  "9990": [],
+  "9996": [],
+  "9997": [],
+  "9998": [],
+  "9999": [],
+  "10000": [],
+  "10001": [],
+  "10024": [],
+  "10081": [],
+  "10086": [],
+  "10101": [],
+  "10200": [
+    "https://gnosisfaucet.com"
+  ],
+  "10201": [
+    "https://faucet.maxxchain.org"
+  ],
+  "10222": [],
+  "10242": [],
+  "10243": [
+    "https://faucet.arthera.net"
+  ],
+  "10248": [],
+  "10321": [],
+  "10324": [
+    "https://faucet.taoevm.io"
+  ],
+  "10395": [],
+  "10507": [],
+  "10508": [
+    "https://faucet.avax.network/?subnet=num",
+    "https://faucet.num.network"
+  ],
+  "10823": [],
+  "10849": [],
+  "10850": [],
+  "10946": [],
+  "10947": [
+    "https://faucetpage.quadrans.io"
+  ],
+  "11110": [],
+  "11111": [
+    "https://faucet.avax.network/?subnet=wagmi"
+  ],
+  "11115": [
+    "https://faucet.astranaut.dev"
+  ],
+  "11119": [],
+  "11221": [],
+  "11227": [],
+  "11235": [],
+  "11437": [],
+  "11501": [],
+  "11503": [],
+  "11612": [
+    "https://faucet.sardisnetwork.com"
+  ],
+  "11822": [],
+  "11891": [],
+  "12009": [],
+  "12020": [
+    "https://faucet.aternoschain.com"
+  ],
+  "12051": [
+    "https://nft.singularity.gold"
+  ],
+  "12052": [
+    "https://zeroscan.singularity.gold"
+  ],
+  "12123": [
+    "https://faucet.brcchain.io"
+  ],
+  "12306": [
+    "https://test.fibochain.org/faucets"
+  ],
+  "12321": [
+    "https://faucet.blgchain.com"
+  ],
+  "12324": [],
+  "12325": [],
+  "12345": [
+    "https://faucet.step.network"
+  ],
+  "12553": [],
+  "12715": [],
+  "12781": [],
+  "12890": [],
+  "12898": [],
+  "13000": [],
+  "13308": [],
+  "13337": [
+    "https://faucet.avax.network/?subnet=beam",
+    "https://faucet.onbeam.com"
+  ],
+  "13371": [
+    "https://docs.immutable.com/docs/zkEVM/guides/faucet"
+  ],
+  "13381": [],
+  "13396": [],
+  "13473": [
+    "https://docs.immutable.com/docs/zkEVM/guides/faucet"
+  ],
+  "13505": [],
+  "13600": [],
+  "13812": [],
+  "14000": [],
+  "14324": [
+    "https://faucet.evolveblockchain.io"
+  ],
+  "14333": [
+    "https://faucet.vitruveo.xyz"
+  ],
+  "14801": [
+    "https://faucet.vana.org"
+  ],
+  "14853": [
+    "https://t.me/HumanodeTestnet5FaucetBot"
+  ],
+  "15003": [
+    "https://docs.immutable.com/docs/zkEVM/guides/faucet"
+  ],
+  "15257": [
+    "https://faucet.poodl.org"
+  ],
+  "15259": [],
+  "15551": [],
+  "15555": [
+    "https://faucet.testnet-dev.trust.one/"
+  ],
+  "15557": [],
+  "16000": [],
+  "16001": [
+    "https://faucet.metadot.network/"
+  ],
+  "16116": [],
+  "16507": [],
+  "16688": [],
+  "16718": [],
+  "16888": [
+    "https://tfaucet.ivarex.com/"
+  ],
+  "17000": [
+    "https://faucet.holesky.ethpandaops.io",
+    "https://holesky-faucet.pk910.de"
+  ],
+  "17069": [],
+  "17117": [],
+  "17171": [
+    "https://faucet.oneg8.network"
+  ],
+  "17172": [],
+  "17180": [],
+  "17217": [],
+  "17777": [],
+  "18000": [],
+  "18122": [],
+  "18159": [],
+  "18181": [
+    "https://faucet.oneg8.network"
+  ],
+  "18233": [],
+  "18686": [],
+  "18888": [],
+  "18889": [],
+  "19011": [],
+  "19224": [],
+  "19527": [],
+  "19600": [],
+  "19845": [],
+  "20001": [],
+  "20041": [],
+  "20073": [],
+  "20729": [
+    "https://faucet.callisto.network/"
+  ],
+  "20736": [],
+  "20765": [],
+  "21004": [
+    "https://play.google.com/store/apps/details?id=net.c4ei.fps2"
+  ],
+  "21133": [
+    "https://t.me/c4eiAirdrop"
+  ],
+  "21223": [],
+  "21224": [
+    "https://faucet.dcpay.io"
+  ],
+  "21337": [],
+  "21816": [],
+  "21912": [],
+  "22023": [],
+  "22040": [],
+  "22222": [],
+  "22324": [
+    "https://faucet.goldxchain.io"
+  ],
+  "22776": [],
+  "23006": [
+    "https://faucet.antofy.io"
+  ],
+  "23118": [
+    "https://faucet.opside.network"
+  ],
+  "23294": [],
+  "23295": [],
+  "23451": [],
+  "23452": [],
+  "23888": [],
+  "24484": [],
+  "24734": [],
+  "25186": [],
+  "25839": [
+    "https://faucet.alveytestnet.com"
+  ],
+  "25888": [],
+  "25925": [
+    "https://faucet.bitkubchain.com"
+  ],
+  "26026": [
+    "https://testnet.faucet.ferrumnetwork.io"
+  ],
+  "26600": [],
+  "26863": [
+    "http://faucet.oasischain.io"
+  ],
+  "27181": [],
+  "27483": [],
+  "27827": [],
+  "28516": [],
+  "28518": [],
+  "28528": [],
+  "28882": [
+    "https://www.l2faucet.com/boba"
+  ],
+  "29112": [],
+  "29536": [
+    "https://faucet.kaichain.net"
+  ],
+  "29548": [],
+  "30067": [
+    "https://piecenetwork.com/faucet"
+  ],
+  "30088": [],
+  "30103": [],
+  "30730": [],
+  "30731": [],
+  "30732": [],
+  "31102": [],
+  "31223": [],
+  "31224": [
+    "https://faucet.cloudtx.finance"
+  ],
+  "31337": [],
+  "31414": [
+    "https://faucet.evokescan.org"
+  ],
+  "31753": [],
+  "31754": [
+    "https://xchainfaucet.net"
+  ],
+  "32001": [],
+  "32382": [],
+  "32520": [],
+  "32659": [],
+  "32769": [],
+  "32990": [
+    "https://dev-wallet.zilliqa.com/faucet?network=isolated_server"
+  ],
+  "33033": [],
+  "33101": [
+    "https://dev-wallet.zilliqa.com/faucet?network=testnet"
+  ],
+  "33103": [
+    "https://faucet.zq2-prototestnet.zilliqa.com"
+  ],
+  "33133": [],
+  "33210": [],
+  "33333": [],
+  "33385": [
+    "https://faucet.devnet.zilliqa.com/"
+  ],
+  "33469": [
+    "https://faucet.zq2-devnet.zilliqa.com"
+  ],
+  "33979": [],
+  "34443": [],
+  "35011": [],
+  "35441": [],
+  "35443": [],
+  "38400": [],
+  "38401": [
+    "https://robin-faucet.rangersprotocol.com"
+  ],
+  "39656": [],
+  "39797": [],
+  "39815": [],
+  "41500": [],
+  "42069": [],
+  "42072": [],
+  "42161": [],
+  "42170": [],
+  "42220": [],
+  "42261": [
+    "https://faucet.testnet.oasis.io/"
+  ],
+  "42262": [],
+  "42355": [],
+  "42766": [],
+  "42793": [],
+  "42801": [],
+  "42888": [],
+  "43110": [
+    "http://athfaucet.ava.network//?address=${ADDRESS}"
+  ],
+  "43111": [],
+  "43113": [
+    "https://faucet.avax-test.network/"
+  ],
+  "43114": [],
+  "43851": [],
+  "44444": [],
+  "44445": [],
+  "44787": [
+    "https://celo.org/developers/faucet",
+    "https://cauldron.pretoriaresearchlab.io/alfajores-faucet"
+  ],
+  "45000": [],
+  "45454": [],
+  "45510": [
+    "https://faucet.deelance.com"
+  ],
+  "46688": [],
+  "47805": [],
+  "48795": [],
+  "48899": [],
+  "49049": [],
+  "49088": [],
+  "49321": [],
+  "49797": [],
+  "50001": [],
+  "50005": [],
+  "50006": [],
+  "50021": [],
+  "51178": [],
+  "51712": [
+    "https://faucet.sardisnetwork.com"
+  ],
+  "52014": [],
+  "53277": [],
+  "53302": [
+    "https://sepoliafaucet.com"
+  ],
+  "53457": [],
+  "53935": [],
+  "54211": [
+    "https://testedge2.haqq.network"
+  ],
+  "54321": [],
+  "54555": [
+    "https://photonchain.io/airdrop"
+  ],
+  "55004": [],
+  "55555": [
+    "http://kururu.finance/faucet?chainId=55555"
+  ],
+  "55556": [
+    "http://kururu.finance/faucet?chainId=55556"
+  ],
+  "56026": [],
+  "56288": [],
+  "56400": [],
+  "56789": [
+    "https://nova-faucet.velo.org"
+  ],
+  "56797": [],
+  "57000": [
+    "https://rollux.id/faucetapp"
+  ],
+  "57451": [],
+  "58008": [],
+  "59140": [
+    "https://faucetlink.to/goerli"
+  ],
+  "59141": [],
+  "59144": [],
+  "59971": [],
+  "60000": [
+    "https://www.thinkiumdev.net/faucet"
+  ],
+  "60001": [
+    "https://www.thinkiumdev.net/faucet"
+  ],
+  "60002": [
+    "https://www.thinkiumdev.net/faucet"
+  ],
+  "60103": [
+    "https://www.thinkiumdev.net/faucet"
+  ],
+  "60808": [],
+  "61406": [],
+  "61800": [],
+  "61803": [
+    "http://faucet.etica-stats.org/"
+  ],
+  "61916": [],
+  "62049": [],
+  "62050": [],
+  "62298": [
+    "https://citrea.xyz/bridge"
+  ],
+  "62320": [
+    "https://docs.google.com/forms/d/e/1FAIpQLSdfr1BwUTYepVmmvfVUDRCwALejZ-TUva2YujNpvrEmPAX2pg/viewform",
+    "https://cauldron.pretoriaresearchlab.io/baklava-faucet"
+  ],
+  "62621": [],
+  "62831": [
+    "https://faucet.avax.network/?subnet=plyr"
+  ],
+  "63000": [],
+  "63001": [
+    "https://faucet.tst.ecredits.com"
+  ],
+  "65450": [],
+  "66988": [],
+  "67588": [],
+  "68770": [],
+  "69420": [
+    "https://faucet.condrieu.ethdevops.io"
+  ],
+  "70000": [],
+  "70001": [],
+  "70002": [],
+  "70103": [],
+  "70700": [],
+  "71111": [],
+  "71393": [
+    "https://faucet.nervos.org/"
+  ],
+  "71401": [
+    "https://testnet.bridge.godwoken.io"
+  ],
+  "71402": [],
+  "72778": [],
+  "72992": [],
+  "73114": [],
+  "73115": [],
+  "73799": [
+    "https://voltafaucet.energyweb.org"
+  ],
+  "73927": [],
+  "75000": [],
+  "75512": [],
+  "75513": [],
+  "77001": [],
+  "77238": [
+    "https://faucet.foundryscan.org"
+  ],
+  "77612": [
+    "https://faucet.vention.network"
+  ],
+  "77777": [],
+  "78110": [],
+  "78281": [],
+  "78430": [],
+  "78431": [],
+  "78432": [],
+  "78600": [
+    "https://faucet.vanarchain.com"
+  ],
+  "79879": [
+    "https://faucet.goldsmartchain.com"
+  ],
+  "80001": [
+    "https://faucet.polygon.technology/"
+  ],
+  "80002": [
+    "https://faucet.polygon.technology/"
+  ],
+  "80084": [
+    "https://bartio.faucet.berachain.com"
+  ],
+  "80085": [
+    "https://artio.faucet.berachain.com"
+  ],
+  "80096": [],
+  "81041": [],
+  "81341": [],
+  "81342": [],
+  "81343": [],
+  "81351": [],
+  "81352": [],
+  "81353": [],
+  "81361": [],
+  "81362": [],
+  "81363": [],
+  "81457": [],
+  "81720": [],
+  "82459": [],
+  "83872": [],
+  "84531": [
+    "https://www.coinbase.com/faucets/base-ethereum-goerli-faucet"
+  ],
+  "84532": [],
+  "84886": [],
+  "85449": [],
+  "88002": [
+    "https://proteusfaucet.nautchain.xyz"
+  ],
+  "88559": [],
+  "88817": [],
+  "88819": [],
+  "88882": [
+    "https://spicy-faucet.chiliz.com",
+    "https://tatum.io/faucets/chiliz"
+  ],
+  "88888": [
+    "https://spicy-faucet.chiliz.com",
+    "https://tatum.io/faucets/chiliz"
+  ],
+  "90001": [],
+  "90210": [
+    "https://faucet.beverlyhills.ethdevops.io"
+  ],
+  "90354": [
+    "https://www.campnetwork.xyz/faucet"
+  ],
+  "91002": [
+    "https://faucet.eclipse.builders"
+  ],
+  "91120": [],
+  "91715": [],
+  "92001": [
+    "https://faucet.lambda.top"
+  ],
+  "93572": [
+    "https://claim.liquidlayer.network"
+  ],
+  "96970": [
+    "https://mantis.switch.ch/faucet",
+    "https://mantis.kore-technologies.ch/faucet",
+    "https://mantis.phoenix-systems.io/faucet",
+    "https://mantis.block-spirit.ch/faucet"
+  ],
+  "97531": [],
+  "97970": [
+    "https://faucet.optimusz7.com"
+  ],
+  "98881": [],
+  "99099": [
+    "https://faucet.eliberty.ngo"
+  ],
+  "99998": [],
+  "99999": [],
+  "100000": [],
+  "100001": [],
+  "100002": [],
+  "100003": [],
+  "100004": [],
+  "100005": [],
+  "100006": [],
+  "100007": [],
+  "100008": [],
+  "100009": [],
+  "100010": [
+    "https://faucet.vecha.in"
+  ],
+  "100011": [],
+  "101010": [],
+  "102031": [],
+  "103090": [],
+  "103454": [],
+  "104566": [],
+  "105105": [],
+  "108801": [],
+  "110000": [],
+  "110001": [],
+  "110002": [],
+  "110003": [],
+  "110004": [],
+  "110005": [],
+  "110006": [],
+  "110007": [],
+  "110008": [],
+  "110011": [],
+  "111000": [],
+  "111111": [],
+  "111188": [],
+  "112358": [],
+  "119139": [],
+  "123456": [],
+  "128123": [
+    "https://faucet.etherlink.com"
+  ],
+  "131313": [
+    "https://faucet.dioneprotocol.com/"
+  ],
+  "131419": [],
+  "132902": [
+    "https://info.form.network/faucet"
+  ],
+  "141319": [],
+  "142857": [],
+  "161212": [],
+  "165279": [],
+  "167000": [],
+  "167008": [],
+  "167009": [],
+  "188710": [],
+  "188881": [
+    "https://faucet.condor.systems"
+  ],
+  "192940": [],
+  "200000": [],
+  "200101": [],
+  "200202": [],
+  "200625": [],
+  "200810": [
+    "https://www.bitlayer.org/faucet"
+  ],
+  "200901": [],
+  "201018": [],
+  "201030": [
+    "https://faucet.alaya.network/faucet/?id=f93426c0887f11eb83b900163e06151c"
+  ],
+  "201804": [],
+  "202020": [],
+  "202212": [],
+  "202401": [],
+  "202624": [],
+  "204005": [],
+  "205205": [
+    "https://auroria.faucet.stratisevm.com"
+  ],
+  "210049": [],
+  "210425": [],
+  "220315": [],
+  "221230": [],
+  "221231": [
+    "http://faucet.reapchain.com"
+  ],
+  "222222": [],
+  "222555": [],
+  "222666": [
+    "https://faucet.deeplnetwork.org"
+  ],
+  "224168": [],
+  "224422": [],
+  "224433": [],
+  "230315": [
+    "https://testnet.hashkeychain/faucet"
+  ],
+  "234666": [],
+  "240515": [],
+  "246529": [],
+  "246785": [],
+  "247253": [],
+  "256256": [],
+  "262371": [
+    "https://faucet.eclatscan.com"
+  ],
+  "266256": [],
+  "271271": [
+    "https://faucet.egonscan.com"
+  ],
+  "281121": [],
+  "282828": [],
+  "309075": [],
+  "313313": [],
+  "314159": [
+    "https://faucet.calibration.fildev.network/"
+  ],
+  "322202": [],
+  "323213": [
+    "https://faucet.bloomgenesis.com"
+  ],
+  "330844": [
+    "https://faucet.tscscan.com"
+  ],
+  "333313": [],
+  "333331": [],
+  "333333": [],
+  "333666": [
+    "https://apps-test.adigium.com/faucet"
+  ],
+  "333777": [
+    "https://apps-test.adigium.com/faucet"
+  ],
+  "333888": [
+    "https://faucet.polis.tech"
+  ],
+  "333999": [
+    "https://faucet.polis.tech"
+  ],
+  "336655": [
+    "https://faucet-testnet.uniport.network"
+  ],
+  "336666": [],
+  "355110": [],
+  "355113": [
+    "https://bitfinity.network/faucet"
+  ],
+  "360890": [],
+  "363636": [],
+  "373737": [],
+  "381931": [],
+  "381932": [],
+  "404040": [
+    "https://faucet.tipboxcoin.net"
+  ],
+  "413413": [],
+  "420420": [],
+  "420666": [],
+  "420692": [],
+  "421611": [
+    "http://fauceth.komputing.org?chain=421611&address=${ADDRESS}"
+  ],
+  "421613": [],
+  "421614": [],
+  "424242": [],
+  "431140": [],
+  "432201": [
+    "https://faucet.avax.network/?subnet=dexalot"
+  ],
+  "432204": [],
+  "444444": [],
+  "444900": [
+    "https://faucet.weelink.gw002.oneitfarm.com"
+  ],
+  "471100": [],
+  "473861": [],
+  "474142": [],
+  "490000": [],
+  "504441": [],
+  "512512": [
+    "https://dev.caduceus.foundation/testNetwork"
+  ],
+  "513100": [],
+  "526916": [],
+  "534351": [],
+  "534352": [],
+  "534849": [
+    "https://faucet.shinarium.org"
+  ],
+  "535037": [],
+  "552981": [
+    "https://faucet.oneworldchain.org"
+  ],
+  "555555": [
+    "https://bridge-testnet.pentagon.games"
+  ],
+  "555666": [],
+  "622277": [],
+  "622463": [],
+  "641230": [],
+  "651940": [],
+  "656476": [],
+  "660279": [],
+  "666666": [
+    "https://vpioneerfaucet.visionscan.org"
+  ],
+  "666888": [
+    "https://testnet-faucet.helachain.com"
+  ],
+  "686868": [
+    "https://faucet.wondollars.org"
+  ],
+  "696969": [
+    "https://docs.galadriel.com/faucet"
+  ],
+  "710420": [],
+  "713715": [
+    "https://sei-faucet.nima.enterprises",
+    "https://sei-evm.faucetme.pro"
+  ],
+  "721529": [],
+  "743111": [],
+  "751230": [
+    "https://faucet.bearnetwork.net"
+  ],
+  "761412": [],
+  "764984": [],
+  "767368": [],
+  "776877": [],
+  "800001": [],
+  "808080": [],
+  "810180": [],
+  "810181": [],
+  "810182": [],
+  "820522": [],
+  "827431": [],
+  "839320": [
+    "https://faucet.prmscan.org"
+  ],
+  "846000": [],
+  "855456": [],
+  "879151": [],
+  "888882": [],
+  "888888": [],
+  "900000": [],
+  "910000": [
+    "https://faucet.posichain.org/"
+  ],
+  "912559": [
+    "https://faucet.evm.dusk-3.devnet.astria.org/"
+  ],
+  "920000": [
+    "https://faucet.posichain.org/"
+  ],
+  "920001": [
+    "https://faucet.posichain.org/"
+  ],
+  "923018": [
+    "https://faucet-testnet.fncy.world"
+  ],
+  "955081": [],
+  "955305": [],
+  "978657": [
+    "https://portal.treasure.lol/faucet"
+  ],
+  "984122": [],
+  "984123": [],
+  "988207": [],
+  "998899": [
+    "https://faucet.chaingames.io"
+  ],
+  "999999": [],
+  "1100789": [],
+  "1127469": [],
+  "1261120": [],
+  "1313114": [],
+  "1313500": [],
+  "1337702": [
+    "http://fauceth.komputing.org?chain=1337702&address=${ADDRESS}",
+    "https://faucet.kintsugi.themerge.dev"
+  ],
+  "1337802": [
+    "https://faucet.kiln.themerge.dev",
+    "https://kiln-faucet.pk910.de",
+    "https://kilnfaucet.com"
+  ],
+  "1337803": [
+    "https://faucet.zhejiang.ethpandaops.io",
+    "https://zhejiang-faucet.pk910.de"
+  ],
+  "1398243": [],
+  "1612127": [],
+  "1637450": [],
+  "1731313": [],
+  "2021398": [],
+  "2099156": [],
+  "2206132": [
+    "https://devnet2faucet.platon.network/faucet"
+  ],
+  "2611555": [],
+  "3132023": [],
+  "3141592": [
+    "https://faucet.butterfly.fildev.network"
+  ],
+  "3397901": [],
+  "3441005": [],
+  "3441006": [],
+  "4000003": [],
+  "4281033": [],
+  "5112023": [],
+  "5167003": [],
+  "5167004": [],
+  "5201420": [],
+  "5318008": [
+    "https://dev.reactive.network/docs/kopli-testnet#faucet"
+  ],
+  "5555555": [],
+  "5555558": [],
+  "6038361": [],
+  "6666665": [],
+  "6666666": [],
+  "7225878": [],
+  "7355310": [],
+  "7668378": [
+    "https://faucet.qom.one"
+  ],
+  "7762959": [],
+  "7777777": [],
+  "8007736": [],
+  "8008135": [
+    "https://get-helium.fhenix.zone"
+  ],
+  "8080808": [],
+  "8601152": [
+    "https://faucet.testnet8.waterfall.network"
+  ],
+  "8794598": [],
+  "8888881": [],
+  "8888888": [],
+  "9322252": [],
+  "9322253": [],
+  "10067275": [],
+  "10101010": [
+    "https://faucet.soverun.com"
+  ],
+  "10241025": [],
+  "11155111": [
+    "http://fauceth.komputing.org?chain=11155111&address=${ADDRESS}"
+  ],
+  "11155420": [
+    "https://app.optimism.io/faucet"
+  ],
+  "13068200": [
+    "https://faucet.coti.io"
+  ],
+  "13371337": [],
+  "14288640": [],
+  "16658437": [],
+  "17000920": [],
+  "18289463": [],
+  "20180427": [],
+  "20180430": [],
+  "20181205": [],
+  "20201022": [],
+  "20240324": [],
+  "20241133": [],
+  "20482050": [],
+  "22052002": [],
+  "27082017": [
+    "https://faucet.exlscan.com"
+  ],
+  "27082022": [],
+  "28122024": [],
+  "28945486": [],
+  "29032022": [],
+  "31415926": [],
+  "35855456": [],
+  "37084624": [
+    "https://www.sfuelstation.com/"
+  ],
+  "39916801": [],
+  "43214913": [],
+  "61717561": [
+    "https://aquacha.in/faucet"
+  ],
+  "65010002": [
+    "https://faucet.autonity.org/"
+  ],
+  "65100002": [],
+  "68840142": [
+    "https://faucet.triangleplatform.com/frame/testnet"
+  ],
+  "77787778": [],
+  "88888888": [],
+  "94204209": [],
+  "99415706": [
+    "https://faucet.joys.digital/"
+  ],
+  "108160679": [],
+  "111557560": [],
+  "123420111": [],
+  "161221135": [],
+  "168587773": [
+    "https://faucet.quicknode.com/blast/sepolia"
+  ],
+  "192837465": [],
+  "222000222": [],
+  "245022926": [
+    "https://neonfaucet.org"
+  ],
+  "245022934": [],
+  "278611351": [
+    "https://faucet.razorscan.io/"
+  ],
+  "311752642": [],
+  "328527624": [],
+  "333000333": [],
+  "356256156": [],
+  "486217935": [],
+  "666666666": [],
+  "888888888": [],
+  "889910245": [
+    "https://faucet.ptcscan.io/"
+  ],
+  "889910246": [],
+  "974399131": [
+    "https://www.sfuelstation.com/"
+  ],
+  "999999999": [],
+  "1020352220": [
+    "https://www.sfuelstation.com/"
+  ],
+  "1122334455": [],
+  "1146703430": [],
+  "1273227453": [
+    "https://dashboard.humanprotocol.org/faucet"
+  ],
+  "1313161554": [],
+  "1313161555": [],
+  "1313161556": [],
+  "1313161560": [],
+  "1350216234": [
+    "https://sfuel.skale.network/"
+  ],
+  "1351057110": [
+    "https://sfuel.skale.network/staging/chaos"
+  ],
+  "1380012617": [],
+  "1380996178": [],
+  "1444673419": [
+    "https://www.sfuelstation.com/"
+  ],
+  "1482601649": [
+    "https://sfuel.skale.network/"
+  ],
+  "1564830818": [
+    "https://sfuel.dirtroad.dev"
+  ],
+  "1666600000": [],
+  "1666600001": [],
+  "1666700000": [
+    "https://faucet.pops.one"
+  ],
+  "1666700001": [
+    "https://faucet.pops.one"
+  ],
+  "1666900000": [],
+  "1666900001": [],
+  "1802203764": [],
+  "1918988905": [],
+  "2021121117": [],
+  "2046399126": [
+    "https://ruby.exchange/faucet.html",
+    "https://sfuel.mylilius.com/"
+  ],
+  "3125659152": [],
+  "4216137055": [
+    "https://frankenstein-faucet.oneledger.network"
+  ],
+  "11297108109": [],
+  "11297108099": [],
+  "28872323069": [],
+  "37714555429": [],
+  "88153591557": [],
+  "107107114116": [],
+  "111222333444": [],
+  "197710212030": [],
+  "197710212031": [],
+  "202402181627": [],
+  "383414847825": [
+    "https://faucet.zeniq.net/"
+  ],
+  "666301171999": [],
+  "6022140761023": [],
+  "2713017997578000": [],
+  "2716446429837000": []
 };
